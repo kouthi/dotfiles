@@ -71,8 +71,8 @@ let g:Foldtext_perl_enable=1
 hi Folded gui=bold term=standout ctermbg=DarkGrey ctermfg=black
 hi FoldColumn gui=bold term=standout ctermbg=DarkGrey ctermfg=black
 " :help ft-changelog-plugin
-let g:changelog_username="kouthi"
-let g:changelog_date_entry_search="%Y-%m-%d"
+let g:changelog_username='kouthi'
+let g:changelog_date_entry_search='%Y-%m-%d'
 runtime ftplugin/changelog.vim
 " In OSX, change the setting of keyboard 'wat insert when press '\'' preference.
 " Otherwise, the following won't work.
