@@ -9,6 +9,7 @@
 " <ESC> in command-line mode
 " \0 or \r in {string} of :s
 " TIPS: cmdline 
+" :a!
 " :DiffOrig
 " :se {option}&, :se all&, :verb se {option}?
 " :echo g:colors_name, :echo &t_Co
