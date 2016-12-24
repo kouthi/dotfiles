@@ -23,7 +23,7 @@ term xterm-256color
 #hardstatus alwayslastline "%{= dk} %-w%{=b dk} %n %t %{-}%+w %= %m/%d %c%{-}:%s"
 #hardstatus alwayslastline "%{= dk} %-w%{= dk} %n %t %{-}%+w %= %m/%d %c%{-}:%s"
 #hardstatus on
-hardstatus string "%Lw" 
+hardstatus string "%Lw"
 #hardstatus alwayslastline "%Lw"
 # 2011-01-20
 # Ref: http://k-ui.jp/?p=108k
