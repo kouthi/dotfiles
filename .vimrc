@@ -63,8 +63,11 @@ hi Pmenu ctermfg=gray ctermbg=black
 set backupdir=~/.vim/backup directory=~/.vim/swap
 "set colorcolumn=81 " Once I set it, but concluded is dirty.
 "set noequalalways " This causes E36 when :cwin. I can't recognize why.
-" ~/.vim/plugin/foldtext.vim
+" folding
 set foldmethod=syntax
+let g:perl_fold=1
+let g:tex_fold_enabled=1
+" ~/.vim/plugin/foldtext.vim
 let g:Foldtext_enable=1
 let g:Foldtext_tex_enable=1
 let g:Foldtext_cpp_enable=1
