@@ -8,7 +8,7 @@
 " <Tab> in Normal mode or quickfix window
 " <ESC> in command-line mode
 " \0 or \r in {string} of :s
-" TIPS: cmdline 
+" TIPS: cmdline
 " :a!
 " :DiffOrig
 " :se {option}&, :se all&, :verb se {option}?
@@ -30,11 +30,11 @@
 " <c-y>:ok, <c-e>:cancel
 
 " source $VIMRUNTIME/defaults.vim " just for reference (using gf on this)
-source $VIMRUNTIME/vimrc_example.vim 
+source $VIMRUNTIME/vimrc_example.vim
 " The part 'I humbly don't agree with you, Mr.Bram.'
-" we have brilliant HML movement of intuition in normal mode. 
+" we have brilliant HML movement of intuition in normal mode.
 " However, setting the following non-zero unnecessarily collapses this virtue.
-set scrolloff=0 
+set scrolloff=0
 " 'suicide' features of their own is not beautiful unless it is
 " too malfunction to accept, and I think ex mode is not.
 unmap Q
@@ -45,6 +45,7 @@ set t_Co=256
 colorscheme apprentice
 " misc
 language C
+set noshowcmd
 set showmatch
 set nowrap
 set novisualbell t_vb=
@@ -63,6 +64,7 @@ hi Pmenu ctermfg=gray ctermbg=black
 set backupdir=~/.vim/backup directory=~/.vim/swap
 " for airline
 set laststatus=2
+let g:airline_powerline_fonts=1
 "set colorcolumn=81 " Once I set it, but concluded is dirty.
 "set noequalalways " This causes E36 when :cwin. I can't recognize why.
 " folding
