@@ -6,3 +6,5 @@
     co = checkout
 [credential]
 	helper = osxkeychain
+[hub]
+	protocol = https
