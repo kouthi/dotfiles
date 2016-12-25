@@ -28,6 +28,8 @@
 ;; Genocide scrollbar
 (setq scroll-step 1)
 (set-scroll-bar-mode nil)
+;; filling setting
+(setq fill-column 78)
 ;; migemo setting
 (require 'migemo)
 (setq migemo-command "cmigemo")
