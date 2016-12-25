@@ -22,8 +22,6 @@
 " :!sudo tee >/dev/null %
 " :se spell
 " TIPS: completion in insert mode
-" i_<c-x><c-f> filename
-" i_<c-x><c-v> vim command
 " i_<c-x><c-]> tag
 " i_<c-x><c-d> macro
 " i_<c-x><c-o> omni
@@ -57,6 +55,9 @@ set matchpairs+=<:>
 set virtualedit+=block
 set nrformats+=alpha
 set ignorecase smartcase
+" I know formatoptins set here is overwritten by ftplugin, but I don't have an
+" idea what the clever solution is.
+set textwidth=78 formatoptions-=tc formatoptions+=j
 set ttymouse=xterm2
 behave mswin
 set completeopt=menuone,preview showfulltag pumheight=10
