@@ -13,8 +13,8 @@ autoload -U colors; colors
 setopt auto_pushd
 setopt pushd_ignore_dups
 setopt correct
-setopt list_packed 
-setopt nolistbeep 
+setopt list_packed
+setopt nolistbeep
 setopt noautoremoveslash
 setopt complete_aliases
 # history
@@ -31,7 +31,7 @@ autoload history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 bindkey "^P" history-beginning-search-backward-end
-bindkey "^N" history-beginning-search-forward-end 
+bindkey "^N" history-beginning-search-forward-end
 # change prompt color based on whether gnu screen is active
 if [ $STY ]
 then
@@ -73,7 +73,7 @@ export GREP_COLORS="fn=32:mt=01;31";
 alias ls="gls --color"
 # 2014-10-06 initial setup for Geant4
 # alias g4init="cd /usr/local/bin/ ; source geant4.sh ; cd -"
-# 2015-08-09 
+# 2015-08-09
 # http://qiita.com/sutoh/items/296b1277b00beae87106
 # alias tmux="tmux -2"
 # 2015-08-30
