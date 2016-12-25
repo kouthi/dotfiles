@@ -43,12 +43,12 @@ set noundofile " new and default from vim7.3, though I don't like this.
 syntax on
 set t_Co=256
 colorscheme apprentice
+hi VertSplit ctermbg=235  ctermfg=238  guibg=#262626 guifg=#444444
+hi Folded gui=bold term=standout ctermbg=DarkGrey ctermfg=black
 " misc
 language C
-set noshowcmd
+set noshowcmd nowrap novisualbell t_vb=
 set showmatch
-set nowrap
-set novisualbell t_vb=
 set fileencodings=ucs-bom,utf-8,cp932 " 'AAAIM JAPANEEEESE!!!' -Mune Kawasaki
 set ambiwidth=double " 'AAAIM JA(ry
 set listchars+=tab:>-,trail:-
@@ -64,7 +64,7 @@ hi Pmenu ctermfg=gray ctermbg=black
 set backupdir=~/.vim/backup directory=~/.vim/swap
 " for airline
 set laststatus=2
-let g:airline_powerline_fonts=1
+set noshowmode
 "set colorcolumn=81 " Once I set it, but concluded is dirty.
 "set noequalalways " This causes E36 when :cwin. I can't recognize why.
 " folding
@@ -76,8 +76,6 @@ let g:Foldtext_enable=1
 let g:Foldtext_tex_enable=1
 let g:Foldtext_cpp_enable=1
 let g:Foldtext_perl_enable=1
-hi Folded gui=bold term=standout ctermbg=DarkGrey ctermfg=black
-hi FoldColumn gui=bold term=standout ctermbg=DarkGrey ctermfg=black
 " :help ft-changelog-plugin
 let g:changelog_username='kouthi'
 let g:changelog_date_entry_search='%Y-%m-%d'
