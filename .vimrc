@@ -21,6 +21,7 @@
 " :opt
 " :!sudo tee >/dev/null %
 " :se spell
+" :helpclose
 " TIPS: completion in insert mode
 " i_<c-x><c-]> tag
 " i_<c-x><c-d> macro
@@ -45,7 +46,7 @@ hi VertSplit ctermbg=235  ctermfg=238  guibg=#262626 guifg=#444444
 hi Folded gui=bold term=standout ctermbg=DarkGrey ctermfg=black
 " misc
 language C
-set noshowcmd nowrap novisualbell t_vb=
+set noshowcmd nowrap belloff=all
 set showmatch
 set fileencodings=ucs-bom,utf-8,cp932 " 'AAAIM JAPANEEEESE!!!' -Mune Kawasaki
 set ambiwidth=double " 'AAAIM JA(ry
@@ -60,7 +61,7 @@ set ignorecase smartcase
 set textwidth=78 formatoptions-=tc formatoptions+=j
 set ttymouse=xterm2
 behave mswin
-set completeopt=menuone,preview showfulltag pumheight=10
+set completeopt=menuone,preview showfulltag pumheight=10 tagcase=smart
 hi Pmenu ctermfg=gray ctermbg=black
 set backupdir=~/.vim/backup directory=~/.vim/swap
 "set colorcolumn=81 " Once I set it, but concluded is dirty.
