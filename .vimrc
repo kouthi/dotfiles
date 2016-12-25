@@ -84,8 +84,9 @@ nnoremap \t :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 " search path
 set path+=./include,/usr/include/**1,/usr/local/include,/usr/local/include/**1
 set tags+=~/.vim/systags
-" cmake recognition
-autocmd BufRead,BufNewFile *.cmake,CMakeLists.txt setf cmake
+" suffix recognition
+autocmd BufRead,BufNewFile *.cmake,CMakeLists.txt set filetype=cmake
+autocmd BufRead,BufNewFile *.org set filetype=org
 " security
 set nomodeline
 set secure
