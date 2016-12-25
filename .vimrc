@@ -62,9 +62,6 @@ behave mswin
 set completeopt=menuone,preview showfulltag pumheight=10
 hi Pmenu ctermfg=gray ctermbg=black
 set backupdir=~/.vim/backup directory=~/.vim/swap
-" for airline
-set laststatus=2
-set noshowmode
 "set colorcolumn=81 " Once I set it, but concluded is dirty.
 "set noequalalways " This causes E36 when :cwin. I can't recognize why.
 " folding
