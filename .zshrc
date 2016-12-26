@@ -67,6 +67,7 @@ RPROMPT='[`rprompt-git-current-branch`%~]'
 alias less="less -iR"
 alias pureless="less"
 alias grep="grep --color=always"
+alias tmux="tmux -2"
 export GREP_COLORS="fn=32:mt=01;31";
 # 2014-10-06 initial setup for Geant4
 # alias g4init="cd /usr/local/bin/ ; source geant4.sh ; cd -"
