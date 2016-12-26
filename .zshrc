@@ -68,9 +68,6 @@ alias less="less -iR"
 alias pureless="less"
 alias grep="grep --color=always"
 export GREP_COLORS="fn=32:mt=01;31";
-# 2015-08-09 for OSX
-# cf. $brew install coreutils
-alias ls="gls --color"
 # 2014-10-06 initial setup for Geant4
 # alias g4init="cd /usr/local/bin/ ; source geant4.sh ; cd -"
 # 2015-08-09
@@ -78,11 +75,6 @@ alias ls="gls --color"
 # alias tmux="tmux -2"
 # 2015-08-30
 alias nap="sudo shutdown -s"
-# 2015-09-01
-. `brew --prefix`/etc/profile.d/z.sh
-function precmd () {
-    z --add "$(pwd -P)"
-}
 # 2015-10-20
 alias xdssh="ssh nethack@xd.cm"
 # perl5 settings that I hate
@@ -103,3 +95,17 @@ man() {
         LESS_TERMCAP_us=$(printf "\e[1;36m") \
     man "$@"
 }
+# OS specific settings
+case "${OSTYPE}" in
+darwin*)
+    # z plugin
+    . `brew --prefix`/etc/profile.d/z.sh
+    function precmd () {
+        z --add "$(pwd -P)"
+    }
+    # cf. $brew install coreutils
+    alias ls="gls --color"
+    ;;
+linux*)
+    ;;
+esac
