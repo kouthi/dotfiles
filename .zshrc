@@ -99,11 +99,6 @@ man() {
 # OS specific settings
 case "${OSTYPE}" in
 darwin*)
-    # z plugin
-    . `brew --prefix`/etc/profile.d/z.sh
-    function precmd () {
-        z --add "$(pwd -P)"
-    }
     # cf. $brew install coreutils
     alias ls="gls --color"
     ;;
