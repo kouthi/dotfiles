@@ -89,6 +89,7 @@ set tags+=~/.vim/systags
 " suffix recognition
 autocmd BufRead,BufNewFile *.cmake,CMakeLists.txt set filetype=cmake
 autocmd BufRead,BufNewFile *.org set filetype=org
+autocmd BufRead,BufNewFile .tmux.conf set filetype=tmux
 " security
 set nomodeline
 set secure
