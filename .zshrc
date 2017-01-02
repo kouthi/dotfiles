@@ -50,14 +50,14 @@ function rprompt-git-current-branch {
         return
     fi
     st=`git status 2> /dev/null`
-    if [[ -n `echo "$st" | grep "^nothing to"` ]]; then
+    if [[ -n `echo "$st" | grep "^nothing to commit"` ]]; then
         color=${fg[green]}
-    elif [[  -n `echo "$st" | grep "^nothing added"` ]]; then
-        color=${fg[yellow]}
-    elif [[  -n `echo "$st" | grep "^# Untracked"` ]]; then
-        color=${fg_bold[red]}
-    else
+    elif [[  -n `echo "$st" | grep "Untracked files"` ]]; then
         color=${fg[red]}
+    elif [[  -n `echo "$st" | grep "Changes not staged"` ]]; then
+        color=${fg[yellow]}
+    else
+        color=${fg[blue]}
     fi
     echo "%{$color%}$name%{$reset_color%} "
 }
