@@ -7,8 +7,14 @@
 " <CTRL-G>j and <CTRL-G>k in Insert mode
 " <Tab> in Normal mode or quickfix window
 " <ESC> in command-line mode
-" \0 or \r in {string} of :s
+" TIPS: completion in insert mode
+" i_<c-x><c-]> tag
+" i_<c-x><c-d> macro
+" i_<c-x><c-o> omni
+" <c-y>:OK, <c-e>:cancel
 " TIPS: cmdline
+" \0 or \r in {string} of :s
+" :* corresponds to :'<,'> (if cpoptions doesn't contain *)
 " :a!
 " :DiffOrig
 " :se {option}&, :se all&, :verb se {option}?
@@ -22,11 +28,19 @@
 " :!sudo tee >/dev/null %
 " :se spell
 " :helpclose
-" TIPS: completion in insert mode
-" i_<c-x><c-]> tag
-" i_<c-x><c-d> macro
-" i_<c-x><c-o> omni
-" <c-y>:ok, <c-e>:cancel
+" TIPS: registers
+" ": unnamed, refer to most recently used register almost every time
+"    with an exception (see below)
+" _: black hole, record nothing including unnamed register
+" 0  : numbered, for YANKING history without specifying register
+" 1-9: numbered, for DELETING history without specifying register
+"      deletions within one line is ignored, unless the motion used in
+"      the deletion has possibility of exceeding one line (namely %()`/?nN{})
+" -: characterwise(small) deletion history without specifying register
+" .: most recently inserted text
+" :: most recently executed EX command
+" /: most recently search string
+" %: current buffer name, #: alternate buffer name
 
 " source $VIMRUNTIME/defaults.vim " just for reference (using gf on this)
 source $VIMRUNTIME/vimrc_example.vim
@@ -46,6 +60,7 @@ hi VertSplit ctermbg=235  ctermfg=238  guibg=#262626 guifg=#444444
 hi Folded gui=bold term=standout ctermbg=DarkGrey ctermfg=black
 " misc
 language C
+set cpoptions+=v$ " make vim nostalgic one
 set noshowcmd nowrap belloff=all
 set showmatch
 set fileencodings=ucs-bom,utf-8,cp932 " 'AAAIM JAPANEEEESE!!!' -Mune Kawasaki
