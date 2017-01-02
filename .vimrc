@@ -88,10 +88,6 @@ let g:Foldtext_enable=1
 let g:Foldtext_tex_enable=1
 let g:Foldtext_cpp_enable=1
 let g:Foldtext_perl_enable=1
-" :help ft-changelog-plugin
-let g:changelog_username='kouthi'
-let g:changelog_date_entry_search='%Y-%m-%d'
-runtime ftplugin/changelog.vim
 " In OSX, change the setting of keyboard 'wat insert when press '\'' preference.
 " Otherwise, the following won't work.
 nnoremap \d O<Esc>!!date +\%F<CR>==I
