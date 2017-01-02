@@ -1,12 +1,10 @@
 " TIPS: normal
-" g* g#
-" gF
-" gR
-" [* or [/
-" z{number}
-" <CTRL-G>j and <CTRL-G>k in Insert mode
+" g* g# : same as *|#, with anti-wordwise
+" gi, g;, g, : work around last changes
+" gF : enhanced gf, which takes the number prefix
+" gR : enter VirtualREPLACE mode
+" [*,]* or [/,]/ : go to prev/next C stype comment
 " <Tab> in Normal mode or quickfix window
-" <ESC> in command-line mode
 " TIPS: completion in insert mode
 " i_<c-x><c-]> tag
 " i_<c-x><c-d> macro
