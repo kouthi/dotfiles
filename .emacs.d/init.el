@@ -4,8 +4,10 @@
 (column-number-mode t)
 ;; Emacs package system
 (require 'package)
+(add-to-list 'package-archives
+                          '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
-(require 'cask "~/.emacs.d/.cask/24.5.1/elpa/cask-20151123.528/cask.el")
+(require 'cask "~/.emacs.d/.cask/24.5.1/elpa/cask-20161024.1205/cask.el")
 (cask-initialize)
 ;; Disable the splash screen
 (setq inhibit-splash-screen t)
