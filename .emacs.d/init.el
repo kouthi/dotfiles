@@ -72,7 +72,7 @@
      (width . 170)
      (top . 23)
      (left . 35)
-     (height . 48)))))
+     (height . 52)))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
