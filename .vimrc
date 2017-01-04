@@ -3,7 +3,7 @@
 " gi, g;, g, : work around last changes
 " gF : enhanced gf, which takes the number prefix
 " gR : enter VirtualREPLACE mode
-" [*,]* or [/,]/ : go to prev/next C stype comment
+" [*,]* or [/,]/ : go to prev/next C style comment
 " <Tab> in Normal mode or quickfix window
 " TIPS: completion in insert mode
 " i_<c-x><c-]> tag
