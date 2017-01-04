@@ -82,8 +82,8 @@
 ;; eshell japanese
 (prefer-coding-system 'utf-8)
 ;; 2016-08-21
-(set-face-attribute 'default nil 
-                    :family "Ricty" 
-                    :height 140)
+(set-face-attribute 'default nil
+                    :family "Ricty Discord"
+                    :height 130)
 ;; 2016-11-23
 (tool-bar-mode 0)
