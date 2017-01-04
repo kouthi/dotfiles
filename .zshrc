@@ -54,10 +54,10 @@ function rprompt-git-current-branch {
         color=${fg[green]}
     elif [[  -n `echo "$st" | grep "Untracked files"` ]]; then
         color=${fg[red]}
-    elif [[  -n `echo "$st" | grep "Changes not staged"` ]]; then
-        color=${fg[yellow]}
-    else
+    elif [[  -n `echo "$st" | grep "Changes to be commit"` ]]; then
         color=${fg[blue]}
+    else
+        color=${fg[yellow]}
     fi
     echo "%{$color%}$name%{$reset_color%} "
 }
