@@ -94,3 +94,11 @@
 (nyan-start-animation)
 (setq nyan-wavy-trail t)
 (set-face-attribute 'mode-line nil  :height 160)
+;; howm
+(setq howm-menu-lang 'ja)
+(setq howm-directory "~/Dropbox/howm/")
+(setq howm-keyword-file "~/Dropbox/howm/.howm-keys")
+(setq howm-file-name-format "%Y/%m/%Y_%m_%d.txt")
+(setq howm-keyword-case-fold-search t)
+(setq howm-view-split-horizontally t)
+(require 'howm)
