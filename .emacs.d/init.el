@@ -15,6 +15,8 @@
 (transient-mark-mode 1)
 (require 'exec-path-from-shell)
 (exec-path-from-shell-initialize)
+;; kill beep
+(setq ring-bell-function 'ignore)
 ;; (let ((envs '("PATH" "VIRTUAL_ENV" )))
   ;; (exec-path-from-shell-copy-envs envs))
 ;; Change backup location
