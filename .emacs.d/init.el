@@ -102,3 +102,7 @@
 (setq howm-keyword-case-fold-search t)
 (setq howm-view-split-horizontally t)
 (require 'howm)
+;; elscreen
+(elscreen-start)
+(setq elscreen-display-tab nil)
+(require 'elscreen-howm)
