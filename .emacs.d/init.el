@@ -106,3 +106,5 @@
 (elscreen-start)
 (setq elscreen-display-tab nil)
 (require 'elscreen-howm)
+;; resolve color conflict of leuven default and ddskk
+(set-cursor-color "#FFFFFF")
