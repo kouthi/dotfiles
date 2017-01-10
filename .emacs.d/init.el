@@ -93,7 +93,6 @@
                     :family "Ricty Discord"
                     :height 130)
 ;; 2016-11-23
-(tool-bar-mode 0)
 ; (require 'nyan-mode)
 ; (nyan-mode)
 ; (nyan-start-animation)
@@ -113,3 +112,5 @@
 (require 'elscreen-howm)
 ;; resolve color conflict of leuven default and ddskk
 (set-cursor-color "#FFFFFF")
+;; vanish toolbar
+(tool-bar-mode 0)
