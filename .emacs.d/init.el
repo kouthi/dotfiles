@@ -116,3 +116,7 @@
 (set-face-background 'fringe "white")
 ;; vanish toolbar
 (tool-bar-mode 0)
+;; recentf
+(require 'recentf)
+(setq recentf-save-file "~/.emacs.d/recentf")
+(require 'recentf-ext)
