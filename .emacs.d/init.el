@@ -112,5 +112,7 @@
 (require 'elscreen-howm)
 ;; resolve color conflict of leuven default and ddskk
 (set-cursor-color "#FFFFFF")
+;; neat vertical border
+(set-face-background 'fringe "white")
 ;; vanish toolbar
 (tool-bar-mode 0)
