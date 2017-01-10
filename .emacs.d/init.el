@@ -94,11 +94,11 @@
                     :height 130)
 ;; 2016-11-23
 (tool-bar-mode 0)
-(require 'nyan-mode)
-(nyan-mode)
-(nyan-start-animation)
-(setq nyan-wavy-trail t)
-(set-face-attribute 'mode-line nil  :height 160)
+; (require 'nyan-mode)
+; (nyan-mode)
+; (nyan-start-animation)
+; (setq nyan-wavy-trail t)
+; (set-face-attribute 'mode-line nil  :height 160)
 ;; howm
 (setq howm-menu-lang 'ja)
 (setq howm-directory "~/Dropbox/howm/")
