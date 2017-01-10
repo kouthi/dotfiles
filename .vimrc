@@ -12,6 +12,7 @@
 " <c-y>:OK, <c-e>:cancel
 " TIPS: cmdline
 " \0 or \r in {string} of :s
+" :{range} normal @{register} : run macro for range
 " :* corresponds to :'<,'> (if cpoptions doesn't contain *)
 " :a!
 " :DiffOrig
