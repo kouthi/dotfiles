@@ -64,6 +64,11 @@
 ;; The above is the default in recent emacsen
 (setq org-goto-auto-isearch nil)
 (custom-set-variables
+;; disable C-c , of org-mode (prefer to use howm)
+(eval-after-load "org"
+  '(progn
+     (define-key org-mode-map (kbd "C-c ,") nil)
+     ))
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
