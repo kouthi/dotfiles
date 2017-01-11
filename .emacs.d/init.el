@@ -51,6 +51,7 @@
 (setq skk-search-katakana t)
 (setq skk-search-katakana 'jisx0201-kana)  ; I like hankaku-kana
 (require 'skk-hint)
+(setq skk-preload t)
 ;;scroll
 (require 'smooth-scrolling)
 (setq smooth-scroll-mode 1)
