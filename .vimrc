@@ -100,6 +100,7 @@ set tags+=~/.vim/systags
 autocmd BufRead,BufNewFile *.cmake,CMakeLists.txt set filetype=cmake
 autocmd BufRead,BufNewFile *.org set filetype=org
 autocmd BufRead,BufNewFile .tmux.conf set filetype=tmux
+autocmd BufRead,BufNewFile .spacemacs set filetype=lisp
 " security
 set nomodeline
 set secure
