@@ -55,7 +55,6 @@
 ;;scroll
 (require 'smooth-scrolling)
 (setq smooth-scroll-mode 1)
-;; 2016-12-11
 (load-theme 'leuven t)
 ;;;; org-mode configuration
 ;; Enable org-mode
