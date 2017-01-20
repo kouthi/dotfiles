@@ -135,20 +135,20 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
+   dotspacemacs-default-font
    ;; use different fonts depending on OS
-   (cond
-    ((string-equal system-type "darwin")
-      dotspacemacs-default-font '("Ricty Discord"
-                                  :size 12
-                                  :weight normal
-                                  :width normal
-                                  :powerline-scale 1.3))
-    ((string-equal system-type "gnu/linux")
-      dotspacemacs-default-font '("Ricty"
-                                  :size 14
-                                  :weight normal
-                                  :width normal
-                                  :powerline-scale 1.3)))
+   (cond ((equal system-type 'darwin)
+          '("Ricty Discord"
+            :size 12
+            :weight normal
+            :width normal
+            :powerline-scale 1.3))
+         ((equal system-type 'gnu/linux)
+          '("Ricty"
+            :size 14
+            :weight normal
+            :width normal
+            :powerline-scale 1.3)))
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The key used for Emacs commands (M-x) (after pressing on the leader key).
