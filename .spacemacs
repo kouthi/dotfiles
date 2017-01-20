@@ -135,11 +135,20 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("Ricty Discord"
-                               :size 12
-                               :weight normal
-                               :width normal
-                               :powerline-scale 1.3)
+   ;; use different fonts depending on OS
+   (cond
+    ((string-equal system-type "darwin")
+      dotspacemacs-default-font '("Ricty Discord"
+                                  :size 12
+                                  :weight normal
+                                  :width normal
+                                  :powerline-scale 1.3))
+    ((string-equal system-type "gnu/linux")
+      dotspacemacs-default-font '("Ricty"
+                                  :size 14
+                                  :weight normal
+                                  :width normal
+                                  :powerline-scale 1.3)))
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The key used for Emacs commands (M-x) (after pressing on the leader key).
@@ -302,19 +311,22 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-    ; change separator
-    (setq powerline-default-separator 'utf-8)
-    ; Japanese font
-    (set-fontset-font
-        nil 'japanese-jisx0208
-        (font-spec :family "Ricty Discord"))
-    ; font for modeline
-    (set-face-font 'mode-line "Source Code Pro")
-    (set-face-font 'mode-line-inactive "Source Code Pro")
-    ; neat vertical border
-    (set-face-background 'fringe "white")
-    ; skk
-    (setq default-input-method "japanese-skk")
+   ;; Settings only in macOS,
+   ;; for coping with the lack of srbg support (not known exactly why)
+   (when (equal system-type 'darwin)
+     ; change separator
+     (setq powerline-default-separator 'utf-8)
+     ; Japanese font
+     (set-fontset-font
+         nil 'japanese-jisx0208
+         (font-spec :family "Ricty Discord"))
+     ; font for modeline
+     (set-face-font 'mode-line "Source Code Pro")
+     (set-face-font 'mode-line-inactive "Source Code Pro"))
+   ; neat vertical border
+   (set-face-background 'fringe "white")
+   ; skk
+   (setq default-input-method "japanese-skk")
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
