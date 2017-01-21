@@ -144,7 +144,7 @@ values."
             :size 12
             :weight normal
             :width normal
-            :powerline-scale 1.3))
+            :powerline-scale 1.4))
          ((equal system-type 'gnu/linux)
           '("Ricty"
             :size 14
@@ -317,14 +317,11 @@ you should place your code here."
    ;; for coping with the lack of srbg support (not known exactly why)
    (when (equal system-type 'darwin)
      ;; change separator
-     (setq powerline-default-separator 'utf-8)
+     (setq powerline-default-separator 'bar)
      ;; Japanese font
      (set-fontset-font
          nil 'japanese-jisx0208
-         (font-spec :family "Ricty Discord"))
-     ;; font for modeline
-     (set-face-font 'mode-line "Source Code Pro")
-     (set-face-font 'mode-line-inactive "Source Code Pro"))
+         (font-spec :family "Ricty Discord")))
    ;; neat vertical border
    (set-face-background 'fringe "white")
    ;; skk
