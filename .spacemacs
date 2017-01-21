@@ -329,8 +329,9 @@ you should place your code here."
    (set-face-background 'fringe "white")
    ;; skk
    (setq default-input-method "japanese-skk")
-   ; evil
-   (setq evil-hybrid-state-cursor '("SkyBlue2" box))
+   ;; evil
+   ;; avoid color confusion with skk-katakana
+   (setq evil-insert-state-cursor '("chartreuse1" box))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
