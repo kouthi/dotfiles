@@ -316,9 +316,9 @@ you should place your code here."
    ;; Settings only in macOS,
    ;; for coping with the lack of srbg support (not known exactly why)
    (when (equal system-type 'darwin)
-     ; change separator
+     ;; change separator
      (setq powerline-default-separator 'utf-8)
-     ; Japanese font
+     ;; Japanese font
      (set-fontset-font
          nil 'japanese-jisx0208
          (font-spec :family "Ricty Discord"))
