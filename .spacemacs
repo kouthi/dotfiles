@@ -322,12 +322,12 @@ you should place your code here."
      (set-fontset-font
          nil 'japanese-jisx0208
          (font-spec :family "Ricty Discord"))
-     ; font for modeline
+     ;; font for modeline
      (set-face-font 'mode-line "Source Code Pro")
      (set-face-font 'mode-line-inactive "Source Code Pro"))
-   ; neat vertical border
+   ;; neat vertical border
    (set-face-background 'fringe "white")
-   ; skk
+   ;; skk
    (setq default-input-method "japanese-skk")
    ; evil
    (setq evil-hybrid-state-cursor '("SkyBlue2" box))
