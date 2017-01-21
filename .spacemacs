@@ -50,6 +50,8 @@ values."
      spell-checking
      syntax-checking
      version-control
+     ;; additional default layers
+     colors
      ;; private layers
      japanese
      howm
