@@ -333,6 +333,12 @@ you should place your code here."
    ;; evil
    ;; avoid color confusion with skk-katakana
    (setq evil-insert-state-cursor '("chartreuse1" box))
+   ;; change show-paren-match face
+   (custom-set-faces
+    '(sp-show-pair-match-face ((t (:background "gray95"
+                                   :foreground "red"
+                                   :underline t
+                                   :weight ultra-bold)))))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
