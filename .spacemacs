@@ -111,7 +111,7 @@ values."
    ;; with `:variables' keyword (similar to layers). Check the editing styles
    ;; section of the documentation for details on available variables.
    ;; (default 'vim)
-   dotspacemacs-editing-style 'vim
+   dotspacemacs-editing-style 'hybrid
    ;; If non nil output loading progress in `*Messages*' buffer. (default nil)
    dotspacemacs-verbose-loading nil
    ;; Specify the startup banner. Default value is `official', it displays
@@ -150,7 +150,7 @@ values."
             :width normal
             :powerline-scale 1.4))
          ((equal system-type 'gnu/linux)
-          '("Ricty"
+          '("Ricty Diminished Discord"
             :size 14
             :weight normal
             :width normal
@@ -320,19 +320,19 @@ you should place your code here."
    ;; Settings only in macOS,
    ;; for coping with the lack of srbg support (not known exactly why)
    (when (equal system-type 'darwin)
-     ;; change separator
-     (setq powerline-default-separator 'bar)
      ;; Japanese font
      (set-fontset-font
          nil 'japanese-jisx0208
          (font-spec :family "Ricty Discord")))
+   ;; change separator
+   (setq powerline-default-separator 'bar)
    ;; neat vertical border
    (set-face-background 'fringe "white")
    ;; skk
    (setq default-input-method "japanese-skk")
    ;; evil
-   ;; avoid color confusion with skk-katakana
    (setq evil-insert-state-cursor '("chartreuse1" box))
+   (setq evil-hybrid-state-cursor '("SkyBlue2" box))
    ;; change show-paren-match face
    (custom-set-faces
     '(sp-show-pair-match-face ((t (:background "gray95"
