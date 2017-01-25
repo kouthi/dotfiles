@@ -336,12 +336,7 @@ you should place your code here."
    (setq evil-insert-state-cursor '("chartreuse1" box))
    (setq evil-hybrid-state-cursor '("SkyBlue2" box))
    ;; change show-paren-match face
-   (custom-set-faces
-    '(sp-show-pair-match-face ((t (:background "gray95"
-                                   :foreground "red"
-                                   :underline t
-                                   :weight ultra-bold)))))
-  )
+ )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
@@ -358,4 +353,4 @@ you should place your code here."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(sp-show-pair-match-face ((t (:background "gray95" :foreground "red" :underline t :weight ultra-bold)))))
