@@ -335,7 +335,6 @@ you should place your code here."
    ;; evil
    (setq evil-insert-state-cursor '("chartreuse1" box))
    (setq evil-hybrid-state-cursor '("SkyBlue2" box))
-   ;; change show-paren-match face
  )
 
 ;; Do not write anything past this comment. This is where Emacs will
