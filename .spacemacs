@@ -156,7 +156,7 @@ values."
             :powerline-scale 1.4))
          ((equal system-type 'gnu/linux)
           '("Ricty Diminished Discord"
-            :size 14
+            :size 16
             :weight normal
             :width normal
             :powerline-scale 1.4)))
@@ -327,7 +327,7 @@ you should place your code here."
      (set-fontset-font
          nil 'japanese-jisx0208
          (font-spec :family "Ricty Discord")))
-   (when (equal system-type 'darwin)
+   (when (equal system-type 'gnu/linux)
      (set-fontset-font
           nil 'japanese-jisx0208
           (font-spec :family "Ricty Diminished Discord")))
