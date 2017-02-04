@@ -322,12 +322,15 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-   ;; Settings only in macOS,
+   ;; Settings depending on OS
    (when (equal system-type 'darwin)
-     ;; Japanese font
      (set-fontset-font
          nil 'japanese-jisx0208
          (font-spec :family "Ricty Discord")))
+   (when (equal system-type 'darwin)
+     (set-fontset-font
+          nil 'japanese-jisx0208
+          (font-spec :family "Ricty Diminished Discord")))
    ;; change separator
    (setq powerline-default-separator 'bar)
    ;; neat vertical border
