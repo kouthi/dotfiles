@@ -155,8 +155,8 @@ values."
             :width normal
             :powerline-scale 1.4))
          ((equal system-type 'gnu/linux)
-          '("Ricty Diminished Discord"
-            :size 18
+          '("Migu 1M"
+            :size 16
             :weight normal
             :width normal
             :powerline-scale 1.4)))
@@ -330,7 +330,7 @@ you should place your code here."
    (when (equal system-type 'gnu/linux)
      (set-fontset-font
           nil 'japanese-jisx0208
-          (font-spec :family "Ricty Diminished Discord")))
+          (font-spec :family "Migu 1M")))
    ;; change separator
    (setq powerline-default-separator 'bar)
    ;; neat vertical border
