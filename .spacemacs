@@ -337,6 +337,9 @@ you should place your code here."
    (setq evil-hybrid-state-cursor '("SkyBlue2" box))
    ;; disable current line highlight
    (global-hl-line-mode -1)
+   ;; keymap for evil-numbers
+   (define-key evil-normal-state-map (kbd "<kp-add>") 'evil-numbers/inc-at-pt)
+   (define-key evil-normal-state-map (kbd "<kp-subtract>") 'evil-numbers/dec-at-pt)
  )
 
 ;; Do not write anything past this comment. This is where Emacs will
