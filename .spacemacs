@@ -332,6 +332,7 @@ you should place your code here."
    (set-face-background 'fringe "white")
    ;; skk
    (setq default-input-method "japanese-skk")
+   (setq skk-search-katakana 'jisx0201-kana)
    ;; evil
    (setq evil-insert-state-cursor '("chartreuse1" box))
    (setq evil-hybrid-state-cursor '("SkyBlue2" box))
