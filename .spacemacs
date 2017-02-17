@@ -156,7 +156,7 @@ values."
             :powerline-scale 1.4))
          ((equal system-type 'gnu/linux)
           '("Ricty Discord"
-            :size 16
+            :size 18
             :weight normal
             :width normal
             :powerline-scale 1.4)))
