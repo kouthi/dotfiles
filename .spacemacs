@@ -55,7 +55,6 @@ values."
      ;; additional default layers
      colors
      imenu-list
-     ess
      html
      shell-scripts
      vimscript
