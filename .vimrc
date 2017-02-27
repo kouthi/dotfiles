@@ -59,11 +59,11 @@ hi VertSplit ctermbg=235  ctermfg=238  guibg=#262626 guifg=#444444
 hi Folded gui=bold term=standout ctermbg=DarkGrey ctermfg=black
 " misc
 language C
-set cpoptions+=v$ " make vim nostalgic one
+set cpoptions+=$ " make vim nostalgic one
 set noshowcmd nowrap belloff=all
 set showmatch
-set fileencodings=ucs-bom,utf-8,cp932 " 'AAAIM JAPANEEEESE!!!' -Mune Kawasaki
-set ambiwidth=double " 'AAAIM JA(ry
+set fileencodings=ucs-bom,utf-8,cp932
+set ambiwidth=double
 set listchars+=tab:>-,trail:-
 set expandtab tabstop=4 shiftwidth=4 shiftround smarttab smartindent " oracle
 set matchpairs+=<:>
