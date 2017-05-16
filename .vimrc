@@ -59,7 +59,6 @@ hi VertSplit ctermbg=235  ctermfg=238  guibg=#262626 guifg=#444444
 hi Folded gui=bold term=standout ctermbg=DarkGrey ctermfg=black
 " misc
 language C
-set cpoptions+=v$ " make vim nostalgic one
 set noshowcmd nowrap belloff=all
 set showmatch
 set fileencodings=ucs-bom,utf-8,cp932
