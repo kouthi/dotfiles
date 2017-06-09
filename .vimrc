@@ -28,18 +28,22 @@
 " :se spell
 " :helpclose
 " TIPS: registers
-" ": unnamed, refer to most recently used register almost every time
+" ["] unnamed, refer to most recently used register almost every time
 "    with an exception (see below)
-" _: black hole, record nothing including unnamed register
-" 0  : numbered, for YANKING history without specifying register
-" 1-9: numbered, for DELETING history without specifying register
+" [%] current buffer name 
+" [#] alternate buffer name
+" [*] the clipboard incarnation (primary)
+" [+] the clipboard incarnation (secondary)
+" [/] most recently search string
+" [:] most recently executed EX command
+" [.] most recently inserted text
+" [-] characterwise(small) deletion history without specifying register
+" [=] the expression register: let us calc
+" [_] black hole, record nothing including unnamed register
+" [0] numbered, for YANKING history without specifying register
+" [1-9] numbered, for DELETING history without specifying register
 "      deletions within one line is ignored, unless the motion used in
 "      the deletion has possibility of exceeding one line (namely %()`/?nN{})
-" -: characterwise(small) deletion history without specifying register
-" .: most recently inserted text
-" :: most recently executed EX command
-" /: most recently search string
-" %: current buffer name, #: alternate buffer name
 
 " source $VIMRUNTIME/defaults.vim " just for reference (using gf on this)
 source $VIMRUNTIME/vimrc_example.vim
