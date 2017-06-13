@@ -26,11 +26,12 @@
 " :opt
 " :!sudo tee >/dev/null %
 " :se spell
+" :set {option}^={string}
 " :helpclose
 " TIPS: registers
 " ["] unnamed, refer to most recently used register almost every time
 "    with an exception (see below)
-" [%] current buffer name 
+" [%] current buffer name
 " [#] alternate buffer name
 " [*] the clipboard incarnation (primary)
 " [+] the clipboard incarnation (secondary)
