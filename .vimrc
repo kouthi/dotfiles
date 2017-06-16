@@ -30,7 +30,7 @@
 " :helpclose
 " TIPS: registers
 " ["] unnamed, refer to most recently used register almost every time
-"    with an exception (see below)
+"     with an exception (see below)
 " [%] current buffer name
 " [#] alternate buffer name
 " [*] the clipboard incarnation (primary)
