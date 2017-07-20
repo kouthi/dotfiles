@@ -94,6 +94,7 @@ man() {
         LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
         LESS_TERMCAP_ue=$(printf "\e[0m") \
         LESS_TERMCAP_us=$(printf "\e[1;36m") \
+        GROFF_NO_SGR=1 \
     man "$@"
 }
 # OS specific settings
