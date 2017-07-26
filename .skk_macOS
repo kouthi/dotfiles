@@ -2,6 +2,8 @@
 ;(require 'skk-tankan)
 ;(require 'skk-gadget)
 ;(require 'ccc)
+(require 'skk-hint)
+(setq skk-show-annotation t)
 (setq skk-use-color-cursor t)
 (setq skk-indicator-use-cursor-color nil)
 (setq skk-show-mode-show t)
