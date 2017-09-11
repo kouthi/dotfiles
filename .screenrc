@@ -16,7 +16,7 @@ termcapinfo xterm* 'hs:ts=\E]0;:fs=\007:ds=\E]0;\007'
 defbce "on"
 # 2010-10-03
 # Reference: http://opotas.org/blog/archives/2006/03/256_colors_putt.html
-term xterm-256color
+# term xterm-256color
 # term screen-256color-bce
 # 2014-07-15
 # $sudo yum install ncurses-term
