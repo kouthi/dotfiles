@@ -104,5 +104,6 @@ darwin*)
     alias ls="gls --color"
     ;;
 linux*)
+    alias ls="ls --color"
     ;;
 esac
