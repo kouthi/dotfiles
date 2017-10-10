@@ -109,12 +109,14 @@ linux*)
 esac
 
 # 2017-09-27 setup for geant4
-g4init() {
-	CLHEP=${HOME}/G4HOME/CLHEP/install
-	export CLHEP_INCLUDE_DIR=${CLHEP}/include/
-	export CLHEP_LIBRARY=${CLHEP}/lib/
-	export LD_LIBRARY_PATH=${CLHEP_LIBRARY}:${LD_LIBRARY_PATH}
-	export PATH=${CLHEP}/bin/:$PATH
-	G4HOME=${HOME}/G4HOME/install
-	cd ${G4HOME}/bin ; source geant4.sh ; cd -
-}
+if [ -d $HOME/G4HOME ]; then
+	g4init() {
+		CLHEP=${HOME}/G4HOME/CLHEP/install
+		export CLHEP_INCLUDE_DIR=${CLHEP}/include/
+		export CLHEP_LIBRARY=${CLHEP}/lib/
+		export LD_LIBRARY_PATH=${CLHEP_LIBRARY}:${LD_LIBRARY_PATH}
+		export PATH=${CLHEP}/bin/:$PATH
+		G4HOME=${HOME}/G4HOME/install
+		cd ${G4HOME}/bin ; source geant4.sh ; cd -
+	}
+fi
