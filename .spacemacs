@@ -352,6 +352,9 @@ you should place your code here."
    ;; keymap for evil-numbers
    (define-key evil-normal-state-map (kbd "<kp-add>") 'evil-numbers/inc-at-pt)
    (define-key evil-normal-state-map (kbd "<kp-subtract>") 'evil-numbers/dec-at-pt)
+   ;; keymap for */# in evil
+   (define-key evil-normal-state-map (kbd "*") 'evil-search-word-forward)
+   (define-key evil-normal-state-map (kbd "#") 'evil-search-word-backward)
  )
 
 ;; Do not write anything past this comment. This is where Emacs will
