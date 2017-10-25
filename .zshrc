@@ -3,8 +3,6 @@ export LANG="ja_JP.UTF-8"
 export LC_MESSAGES=C
 export LC_TIME=C
 export DATE=`date +%F`
-export PATH=$PATH:$HOME/.bin
-export PATH=$PATH:/usr/games
 export EDITOR=vim
 # general
 setopt transient_rprompt
@@ -79,7 +77,6 @@ alias nap="sudo shutdown -s"
 # 2015-10-20
 alias xdssh="ssh nethack@xd.cm"
 # perl5 settings that I hate
-PATH="$HOME/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="$HOME/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="$HOME/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"$HOME/perl5\""; export PERL_MB_OPT;
