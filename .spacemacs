@@ -355,6 +355,9 @@ you should place your code here."
    ;; keymap for */# in evil
    (define-key evil-normal-state-map (kbd "*") 'evil-search-word-forward)
    (define-key evil-normal-state-map (kbd "#") 'evil-search-word-backward)
+   ;; workaround for SPC s e V (issue #9690)
+   (with-eval-after-load 'evil-iedit-state
+     (define-key evil-iedit-state-map "V" 'iedit-show/hide-unmatched-lines))
  )
 
 ;; Do not write anything past this comment. This is where Emacs will
