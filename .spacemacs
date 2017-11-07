@@ -56,6 +56,7 @@ values."
      colors
      c-c++
      csv
+     gnus
      imenu-list
      html
      python
