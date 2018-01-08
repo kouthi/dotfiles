@@ -65,7 +65,6 @@ values."
      dash
      javascript
      osx
-     spotify
      ;; private layers
      japanese
      howm
