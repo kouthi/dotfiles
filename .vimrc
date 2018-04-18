@@ -79,7 +79,11 @@ set ignorecase smartcase
 set textwidth=78 formatoptions-=tc formatoptions+=j
 set ttymouse=xterm2
 behave mswin
-set completeopt=menuone,preview showfulltag pumheight=10 tagcase=smart
+set completeopt=menuone,preview showfulltag pumheight=10
+" 2018-04-18 http://auewe.hatenablog.com/entry/2013/05/14/003610 
+if v:version >= 800
+    set tagcase=smart
+endif
 hi Pmenu ctermfg=gray ctermbg=black
 set backupdir=~/.vim/backup directory=~/.vim/swap
 "set colorcolumn=81 " Once I set it, but concluded is dirty.
