@@ -106,7 +106,7 @@ linux*)
 esac
 
 # 2017-09-27 setup for geant4
-if [ -d $HOME/G4HOME ]; then
+if [ -d $HOME/g4home ]; then
 	g4init() {
 		CLHEP=${HOME}/G4HOME/CLHEP/install
 		export CLHEP_INCLUDE_DIR=${CLHEP}/include/
