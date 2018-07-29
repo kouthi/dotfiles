@@ -54,14 +54,10 @@ values."
      version-control
      ;; additional default layers
      colors
-     c-c++
      csv
      gnus
      imenu-list
      html
-     python
-     shell-scripts
-     vimscript
      dash
      javascript
      osx
