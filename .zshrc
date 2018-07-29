@@ -112,5 +112,3 @@ if [ -d $HOME/g4home ]; then
 		cd ${G4HOME}/bin ; source geant4.sh ; cd -
 	}
 fi
-
-eval $(thefuck --alias)
