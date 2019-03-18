@@ -111,14 +111,4 @@ if [ -d $HOME/g4home ]; then
 		G4HOME=${HOME}/g4home/version/geant4
 		cd ${G4HOME}/bin ; source geant4.sh ; cd -
 	}
-else  # $HOME/G4HOME (Capital)
-  g4init() {
-		CLHEP=${HOME}/G4HOME/CLHEP/install
-		export CLHEP_INCLUDE_DIR=${CLHEP}/include/
-		export CLHEP_LIBRARY=${CLHEP}/lib/
-		export LD_LIBRARY_PATH=${CLHEP_LIBRARY}:${LD_LIBRARY_PATH}
-		export PATH=${CLHEP}/bin/:$PATH
-		G4HOME=${HOME}/G4HOME/install
-		cd ${G4HOME}/bin ; source geant4.sh ; cd -
-	}
 fi
