@@ -6,6 +6,9 @@ hardstatus string "%Lw"
 defscrollback 5000
 altscreen on
 
+zombie ^d
+sorendition "+rb .R"
+
 # 2010-09-12
 # Reference: http://vim-users.jp/2009/08/hack64
 # attrcolor b ".I"
