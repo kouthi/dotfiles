@@ -1,38 +1,7 @@
-nethack on
-autodetach on
-vbell off
-# 2010-09-12
-# Reference: http://vim-users.jp/2009/08/hack64
-# attrcolor b ".I"
-# 2014-07-15
-# Reference: http://calcurio.com/wordpress/?p=181
-# attrcolor b ""
+source ~/dotfiles/.screenrc_common
 termcapinfo xterm*           "Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm"
 # termcapinfo xterm           "Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm"
 # termcapinfo xterm-color     "Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm"
 # termcapinfo xterm-256color  "Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm"
 # termcapinfo xterm|kterm|kterm-color 'hs:ts=\E]2;:fs=\007:ds=\E]0;screen\007'
 # termcapinfo xterm* 'hs:ts=\E]0;:fs=\007:ds=\E]0;\007'
-defbce "on"
-# 2010-10-03
-# Reference: http://opotas.org/blog/archives/2006/03/256_colors_putt.html
-# term xterm-256color
-# term screen-256color-bce
-# 2014-07-15
-# $sudo yum install ncurses-term
-# 2010-10-01
-#hardstatus alwayslastline "%{= dk} %-w%{=b dk} %n %t %{-}%+w %= %m/%d %c%{-}:%s"
-#hardstatus alwayslastline "%{= dk} %-w%{= dk} %n %t %{-}%+w %= %m/%d %c%{-}:%s"
-#hardstatus on
-hardstatus string "%Lw"
-#hardstatus alwayslastline "%Lw"
-# 2011-01-20
-# Ref: http://k-ui.jp/?p=108k
-# defencoding SJIS
-# 2012-08-02
-defscrollback 5000
-altscreen on
-# 2014-09-11
-# http://www.miuxmiu.com/archives/2012/11/21/screen_utf-8_display_garble_solution.html
-# defencoding utf8
-# encoding utf8 utf8
