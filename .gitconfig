@@ -1,8 +1,6 @@
 # This is Git's per-user configuration file.
 [user] 
-    name = kouthi
-    email = kouthi@users.noreply.github.com
+	name = kouthi
+	email = kouthi@users.noreply.github.com
 [alias]
-    co = checkout
-[hub]
-	protocol = https
+	co = checkout
