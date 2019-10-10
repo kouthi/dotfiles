@@ -38,15 +38,15 @@ This function should only modify configuration layer settings."
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     (helm :variables
-           helm-migemo-mode t)
      auto-completion
      better-defaults
      emacs-lisp
      git
+     (helm :variables
+           helm-migemo-mode t)
+     ;; lsp
      markdown
      multiple-cursors
-     treemacs
      (org :variables
           org-enable-reveal-js-support t
           org-enable-table-editor t)
@@ -55,6 +55,7 @@ This function should only modify configuration layer settings."
             shell-default-position 'bottom)
      spell-checking
      syntax-checking
+     treemacs
      version-control
      ;; additional default layers
      colors
@@ -494,7 +495,9 @@ before packages are loaded."
    ;; Japanese font
    (set-fontset-font
        nil 'japanese-jisx0208
-       (font-spec :family "Sarasa Mono J"))
+       (font-spec :family
+                  (cond ((equal system-type 'darwin) "Ricty Discord")
+                        ((equal system-type 'gnu/linux) "Sarasa Mono J"))))
    ;; neat vertical border
    (set-face-background 'fringe "white")
    ;; skk
