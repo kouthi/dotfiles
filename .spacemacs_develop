@@ -496,7 +496,7 @@ before packages are loaded."
    ;; Japanese font
    (set-fontset-font
        nil 'japanese-jisx0208
-       (font-spec :family "Ricty Discord"))
+       (font-spec :family "Sarasa Mono J"))
    ;; neat vertical border
    (set-face-background 'fringe "white")
    ;; skk
