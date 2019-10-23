@@ -495,7 +495,7 @@ before packages are loaded."
        nil 'japanese-jisx0208
        (font-spec :family
                   (cond ((equal system-type 'darwin) "Ricty Discord")
-                        ((equal system-type 'gnu/linux) "Sarasa Mono J"))))
+                        ((equal system-type 'gnu/linux) "Migu 1M"))))
    ;; neat vertical border
    (set-face-background 'fringe "white")
    ;; skk
