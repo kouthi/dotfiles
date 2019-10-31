@@ -488,11 +488,7 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
    ;; Japanese font
-   (set-fontset-font
-       nil 'japanese-jisx0208
-       (font-spec :family
-                  (cond ((equal system-type 'darwin) "Ricty Discord")
-                        ((equal system-type 'gnu/linux) "Migu 1M"))))
+   (set-fontset-font nil 'japanese-jisx0208 (font-spec :family  "Ricty Discord"))
    ;; neat vertical border
    (set-face-background 'fringe "white")
    ;; skk
