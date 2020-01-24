@@ -497,6 +497,10 @@ before packages are loaded."
    (setq evil-insert-state-cursor '("chartreuse1" box))
    ;; disable current line highlight
    (global-hl-line-mode -1)
+   ;; howm split view
+   (cond ((equal system-type 'darwin))
+         ((equal system-type 'gnu/linux)
+          (setq howm-view-split-horizontally nil)))
    ;; ろ->backslash (works with karabiner setting)
    (global-set-key (kbd "M-¥") (lambda () (interactive) (insert "\\"))))
 
