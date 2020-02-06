@@ -502,7 +502,9 @@ before packages are loaded."
          ((equal system-type 'gnu/linux)
           (setq howm-view-split-horizontally nil)))
    ;; ろ->backslash (works with karabiner setting)
-   (global-set-key (kbd "M-¥") (lambda () (interactive) (insert "\\"))))
+   (global-set-key (kbd "M-¥") (lambda () (interactive) (insert "\\")))
+   ;; org-agenda setting
+   (setq org-agenda-files '("~/dropbox/org/")))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
