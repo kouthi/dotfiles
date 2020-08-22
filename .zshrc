@@ -98,7 +98,7 @@ man() {
 case "${OSTYPE}" in
 darwin*)
     # cf. $brew install coreutils
-    alias ls="gls --color"
+    alias ls="ls -G"
     ;;
 linux*)
     alias ls="ls --color"
