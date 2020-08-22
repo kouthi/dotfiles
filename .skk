@@ -8,19 +8,19 @@
 (setq skk-indicator-use-cursor-color nil)
 (setq skk-show-mode-show t)
 (setq skk-extra-jisyo-file-list
-    (list   "~/.emacs.d/private/skk-get-jisyo/SKK-JISYO.L"
-            "~/.emacs.d/private/skk-get-jisyo/SKK-JISYO.assoc"
-            "~/.emacs.d/private/skk-get-jisyo/SKK-JISYO.edict"
-            "~/.emacs.d/private/skk-get-jisyo/SKK-JISYO.fullname"
-            "~/.emacs.d/private/skk-get-jisyo/SKK-JISYO.geo"
-            "~/.emacs.d/private/skk-get-jisyo/SKK-JISYO.itaiji"
-            "~/.emacs.d/private/skk-get-jisyo/SKK-JISYO.jinmei"
-            "~/.emacs.d/private/skk-get-jisyo/SKK-JISYO.law"
-            "~/.emacs.d/private/skk-get-jisyo/SKK-JISYO.lisp"
-            "~/.emacs.d/private/skk-get-jisyo/SKK-JISYO.mazegaki"
-            "~/.emacs.d/private/skk-get-jisyo/zipcode/SKK-JISYO.office.zipcode"
-            "~/.emacs.d/private/skk-get-jisyo/SKK-JISYO.okinawa"
-            "~/.emacs.d/private/skk-get-jisyo/SKK-JISYO.propernoun"
-            "~/.emacs.d/private/skk-get-jisyo/SKK-JISYO.pubdic+"
-            "~/.emacs.d/private/skk-get-jisyo/SKK-JISYO.station"
-            "~/.emacs.d/private/skk-get-jisyo/zipcode/SKK-JISYO.zipcode" ))
+    (list   (concat user-emacs-directory "private/skk-get-jisyo/SKK-JISYO.L")
+            (concat user-emacs-directory "private/skk-get-jisyo/SKK-JISYO.assoc")
+            (concat user-emacs-directory "private/skk-get-jisyo/SKK-JISYO.edict")
+            (concat user-emacs-directory "private/skk-get-jisyo/SKK-JISYO.fullname")
+            (concat user-emacs-directory "private/skk-get-jisyo/SKK-JISYO.geo")
+            (concat user-emacs-directory "private/skk-get-jisyo/SKK-JISYO.itaiji")
+            (concat user-emacs-directory "private/skk-get-jisyo/SKK-JISYO.jinmei")
+            (concat user-emacs-directory "private/skk-get-jisyo/SKK-JISYO.law")
+            (concat user-emacs-directory "private/skk-get-jisyo/SKK-JISYO.lisp")
+            (concat user-emacs-directory "private/skk-get-jisyo/SKK-JISYO.mazegaki")
+            (concat user-emacs-directory "private/skk-get-jisyo/zipcode/SKK-JISYO.office.zipcode")
+            (concat user-emacs-directory "private/skk-get-jisyo/SKK-JISYO.okinawa")
+            (concat user-emacs-directory "private/skk-get-jisyo/SKK-JISYO.propernoun")
+            (concat user-emacs-directory "private/skk-get-jisyo/SKK-JISYO.pubdic+")
+            (concat user-emacs-directory "private/skk-get-jisyo/SKK-JISYO.station")
+            (concat user-emacs-directory "private/skk-get-jisyo/zipcode/SKK-JISYO.zipcode")))
