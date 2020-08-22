@@ -515,8 +515,6 @@ before packages are loaded."
    (cond ((equal system-type 'darwin))
          ((equal system-type 'gnu/linux)
           (setq howm-view-split-horizontally nil)))
-   ;; ろ->backslash (works with karabiner setting)
-   (global-set-key (kbd "M-¥") (lambda () (interactive) (insert "\\")))
    ;; org-agenda setting
    (setq org-agenda-files '("~/dropbox/org/")))
 
