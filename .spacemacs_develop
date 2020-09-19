@@ -59,12 +59,9 @@ This function should only modify configuration layer settings."
      version-control
      ;; additional default layers
      colors
-     gnus
      html
-     imenu-list
      javascript
      osx
-     spotify
      ;; private layers
      howm
      japanese
