@@ -231,7 +231,7 @@ It should only modify the values of Spacemacs settings."
    ;; use different fonts depending on OS
    (cond ((equal system-type 'darwin)
           '("HackGenNerd Console"
-            :size 12
+            :size 14
             :weight normal
             :width normal))
          ((equal system-type 'gnu/linux)
@@ -520,6 +520,7 @@ Put your configuration code here, except for variables that should be set
 before packages are loaded."
    ;; Japanese font
    (set-fontset-font nil 'japanese-jisx0208 (font-spec :family  "Migu 1M"))
+   (set-fontset-font nil '(#x3000 . #x3000) (font-spec :family  "HackGenNerd Console"))
    ;; neat vertical border
    (set-face-background 'fringe "white")
    ;; skk
