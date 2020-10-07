@@ -521,19 +521,23 @@ before packages are loaded."
    ;; Japanese font
    (set-fontset-font nil 'japanese-jisx0208 (font-spec :family  "Migu 1M"))
    (set-fontset-font nil '(#x3000 . #x3000) (font-spec :family  "HackGenNerd Console"))
-   ;; neat vertical border
+   ;; emacs appearance
+   (global-hl-line-mode -1)
    (set-face-background 'fringe "white")
-   ;; skk
-   (setq default-input-method "japanese-skk")
    ;; evil
    (setq evil-insert-state-cursor '("chartreuse1" box))
-   ;; disable current line highlight
-   (global-hl-line-mode -1)
-   ;; howm split view
+   ;; skk
+   (setq default-input-method "japanese-skk")
+   (add-hook 'evil-insert-state-entry-hook 'skk-latin-mode-on)
+   (add-hook 'evil-insert-state-exit-hook (lambda () (skk-mode -1)))
+   (skk-mode)
+   ;; howm
    (cond ((equal system-type 'darwin))
          ((equal system-type 'gnu/linux)
           (setq howm-view-split-horizontally nil)))
-   ;; org-agenda setting
+   (add-hook 'howm-menu-hook 'evil-insert-state)
+   (add-hook 'howm-view-summary-mode-hook 'evil-insert-state)
+   ;; org
    (setq org-agenda-files '("~/dropbox/org/")))
 
 ;; Do not write anything past this comment. This is where Emacs will
