@@ -526,6 +526,9 @@ before packages are loaded."
    (set-face-background 'fringe "white")
    ;; evil
    (setq evil-insert-state-cursor '("chartreuse1" box))
+   ;; spellcheck
+   (setq ispell-local-dictionary-alist
+         '((nil "[a-zA-Z]" "[^a-zA-Z]" "'" t ("-d" "en" "--encoding=utf-8") nil utf-8)))
    ;; skk
    (setq default-input-method "japanese-skk")
    (add-hook 'evil-insert-state-entry-hook 'skk-latin-mode-on)
