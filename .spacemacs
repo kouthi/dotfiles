@@ -44,7 +44,6 @@ This function should only modify configuration layer settings."
      git
      (helm :variables
            helm-migemo-mode t)
-     ;; lsp
      markdown
      multiple-cursors
      (org :variables
@@ -55,7 +54,6 @@ This function should only modify configuration layer settings."
             shell-default-position 'bottom)
      spell-checking
      syntax-checking
-     treemacs
      version-control
      ;; additional default layers
      colors
@@ -539,7 +537,6 @@ before packages are loaded."
          ((equal system-type 'gnu/linux)
           (setq howm-view-split-horizontally nil)))
    (add-hook 'howm-menu-hook 'evil-insert-state)
-   (add-hook 'howm-view-summary-mode-hook 'evil-insert-state)
    ;; org
    (setq org-agenda-files '("~/dropbox/org/")))
 
