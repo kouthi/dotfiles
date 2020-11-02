@@ -10,6 +10,8 @@
 ;(package! some-package)
 (package! howm)
 (package! pangu-spacing :disable t)
+(package! valign
+          :recipe (:host github :repo "casouri/valign"))
 
 ;; To install a package directly from a remote git repo, you must specify a
 ;; `:recipe'. You'll find documentation on what `:recipe' accepts here:

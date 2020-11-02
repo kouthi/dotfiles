@@ -63,3 +63,7 @@
   (setq howm-file-name-format "%Y/%m/%Y-%m-%d_%H%M%S.org")
   (setq howm-keyword-case-fold-search t)
   (setq howm-view-split-horizontally t))
+(use-package! valign
+  :config
+  (add-hook 'org-mode-hook #'valign-mode)
+  (setq valign-fancy-bar t))
