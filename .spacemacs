@@ -535,7 +535,9 @@ before packages are loaded."
    ;; howm
    (cond ((equal system-type 'darwin))
          ((equal system-type 'gnu/linux)
-          (setq howm-view-split-horizontally nil)))
+          (setq howm-view-split-horizontally nil)
+          (set-frame-height (selected-frame) 32)
+          (set-frame-width (selected-frame) 100)))
    (add-hook 'howm-menu-hook 'evil-insert-state)
    ;; org
    (setq org-agenda-files '("~/dropbox/org/")))
