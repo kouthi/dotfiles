@@ -540,7 +540,9 @@ before packages are loaded."
           (set-frame-width (selected-frame) 100)))
    (add-hook 'howm-menu-hook 'evil-insert-state)
    ;; org
-   (setq org-agenda-files '("~/dropbox/org/")))
+   (setq org-agenda-files '("~/dropbox/org/"))
+   ;; markdown
+   (setq markdown-fontify-code-blocks-natively t))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
