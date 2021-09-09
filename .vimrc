@@ -76,6 +76,7 @@ set ignorecase smartcase
 " idea what the clever solution is.
 set textwidth=78 formatoptions-=tc formatoptions+=j
 set ttymouse=xterm2
+set mouse=a
 behave mswin
 set completeopt=menuone,preview showfulltag pumheight=10
 " 2018-04-18 http://auewe.hatenablog.com/entry/2013/05/14/003610 

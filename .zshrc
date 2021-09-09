@@ -100,7 +100,7 @@ darwin*)
     # cf. $brew install coreutils
     alias ls="ls -G"
     ;;
-linux*)
+linux-gnu*)
     alias ls="ls --color"
     # 2020-10-01 VcXsvr setting
     export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0
