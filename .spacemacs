@@ -59,6 +59,7 @@ This function should only modify configuration layer settings."
      ;; treemacs
      ;; additional default layers
      colors
+     html
      osx
      ;; private layers
      howm
