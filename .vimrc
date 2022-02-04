@@ -59,6 +59,7 @@ colorscheme apprentice
 hi VertSplit ctermbg=235  ctermfg=238  guibg=#262626 guifg=#444444
 hi Folded gui=bold term=standout ctermbg=DarkGrey ctermfg=black
 hi Pmenu ctermfg=gray ctermbg=black
+let g:markdown_fenced_languages = ['python', 'js=javascript']
 
 " misc
 language C
