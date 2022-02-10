@@ -114,3 +114,7 @@ if [ -d $HOME/g4home ]; then
 		cd ${G4HOME}/bin ; source geant4.sh ; cd -
 	}
 fi
+
+# 2022-02-08 chemacs aliases
+alias space="emacs --with-profile spacemacs"
+alias dmacs="emacs --with-profile doom"
