@@ -104,6 +104,9 @@ linux-gnu*)
     alias ls="ls --color"
     # 2020-10-01 VcXsvr setting
     export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0
+    if [ "${NAME:0:1}" = "V" ]; then
+        export GDK_SCALE=2
+    fi
     ;;
 esac
 
