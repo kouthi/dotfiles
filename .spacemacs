@@ -602,6 +602,7 @@ before packages are loaded."
    (setq org-agenda-files '("~/dropbox/org/"))
    ;; markdown
    (setq markdown-fontify-code-blocks-natively t)
+   (setq markdown-enable-math t)
    ;; undo-tree
    (setq undo-tree-history-directory-alist '(("." . "~/.config/chemacs/undo-tree"))))
 
