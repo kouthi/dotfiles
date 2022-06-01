@@ -92,6 +92,9 @@ let g:tex_fold_enabled=1
 " Otherwise, the following won't work.
 nnoremap \d O<Esc>!!date +\%F<CR>==I
 nnoremap \t :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+" 2022-05-26
+cnoreabbrev w up
+cnoreabbrev up w
 
 " tag
 if v:version >= 800
