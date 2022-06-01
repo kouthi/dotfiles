@@ -599,7 +599,7 @@ before packages are loaded."
           (set-frame-width (selected-frame) 90)))
    (add-hook 'howm-menu-hook 'evil-insert-state)
    ;; org
-   (setq org-agenda-files '("~/dropbox/org/"))
+   (setq org-agenda-files '("~/onedrive/org/"))
    ;; markdown
    (setq markdown-fontify-code-blocks-natively t)
    (setq markdown-enable-math t)

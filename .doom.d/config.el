@@ -34,7 +34,7 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/dropbox/org/")
+(setq org-directory "~/onedrive/org/")
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -60,8 +60,8 @@
 (use-package! howm
   :config
   (setq howm-menu-lang 'ja)
-  (setq howm-directory "~/dropbox/howm/")
-  (setq howm-keyword-file "~/dropbox/howm/.howm-keys")
+  (setq howm-directory "~/onedrive/howm/")
+  (setq howm-keyword-file "~/onedrive/howm/.howm-keys")
   (setq howm-file-name-format "%Y/%m/%Y-%m-%d_%H%M%S.org")
   (setq howm-keyword-case-fold-search t)
   (setq howm-view-split-horizontally t))
