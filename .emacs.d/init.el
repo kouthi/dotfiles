@@ -14,4 +14,4 @@
  ;; If there is more than one, they won't work right.
  (if (string-match "IO" (system-name))
      '(default ((t (:family "HackGenNerd Console" :foundry "PfEd" :slant normal :weight normal :height 241 :width normal))))
-   '(default ((t (:family "HackGenNerd Console" :foundry "PfEd" :slant normal :weight normal :height 140 :width normal))))))
+   '(default ((t (:family "HackGenNerd Console" :foundry "PfEd" :slant normal :weight normal :height 121 :width normal))))))
