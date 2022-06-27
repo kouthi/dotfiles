@@ -63,7 +63,7 @@ let g:markdown_fenced_languages = ['python', 'js=javascript']
 
 " misc
 language C
-set noshowcmd nowrap belloff=all
+set nowrap belloff=all
 set showmatch
 set fileencodings=ucs-bom,utf-8,cp932
 set ambiwidth=double
