@@ -106,8 +106,6 @@ linux-gnu*)
     export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0
     if [ "${NAME:0:1}" = "V" ]; then
         export GDK_SCALE=2  # for 4K display
-    elif [ "${NAME:0:1}" = "K" ]; then
-        export LIBGL_ALWAYS_INDIRECT=1  # for Xming
     fi
     ;;
 esac
