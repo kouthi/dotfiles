@@ -577,7 +577,8 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
    ;; Japanese font
-   (set-fontset-font nil 'japanese-jisx0208 (font-spec :family  "HackGenNerd Console"))
+   (set-fontset-font nil 'japanese-jisx0208 (font-spec :family  "Migu 1M"))
+   (set-fontset-font nil '(#x3000 . #x3000) (font-spec :family  "HackGenNerd Console"))
    ;; emacs appearance
    (global-hl-line-mode -1)
    (set-face-background 'fringe "white")
