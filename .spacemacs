@@ -266,9 +266,9 @@ It should only modify the values of Spacemacs settings."
             :weight normal
             :width normal))
          ((equal system-type 'gnu/linux)
-          (if (string-match "IO" (system-name))
+          (if (string-match "W" (system-name))
               '("HackGenNerd Console"
-                :size 32
+                :size 20
                 :weight normal
                 :width normal)
             '("HackGenNerd Console"
