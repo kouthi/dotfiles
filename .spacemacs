@@ -576,36 +576,36 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
-   ;; Japanese font
-   (set-fontset-font nil 'japanese-jisx0208 (font-spec :family  "Migu 1M"))
-   (set-fontset-font nil '(#x3000 . #x3000) (font-spec :family  "HackGenNerd Console"))
-   ;; emacs appearance
-   (global-hl-line-mode -1)
-   (set-face-background 'fringe "white")
-   ;; evil
-   (setq evil-insert-state-cursor '("chartreuse1" box))
-   ;; spellcheck
-   (setq ispell-local-dictionary-alist
-         '((nil "[a-zA-Z]" "[^a-zA-Z]" "'" t ("-d" "en" "--encoding=utf-8") nil utf-8)))
-   ;; skk
-   (setq default-input-method "japanese-skk")
-   (add-hook 'evil-insert-state-entry-hook 'skk-latin-mode-on)
-   (add-hook 'evil-insert-state-exit-hook (lambda () (skk-mode -1)))
-   (skk-mode)
-   ;; howm
-   (cond ((equal system-type 'darwin))
-         ((equal system-type 'gnu/linux)
-          (setq howm-view-split-horizontally nil)
-          (set-frame-height (selected-frame) 42)
-          (set-frame-width (selected-frame) 90)))
-   (add-hook 'howm-menu-hook 'evil-insert-state)
-   ;; org
-   (setq org-agenda-files '("~/onedrive/org/"))
-   ;; markdown
-   (setq markdown-fontify-code-blocks-natively t)
-   (setq markdown-enable-math t)
-   ;; undo-tree
-   (setq undo-tree-history-directory-alist '(("." . "~/.config/chemacs/undo-tree"))))
+  ;; Japanese font
+  (set-fontset-font nil 'japanese-jisx0208 (font-spec :family  "Migu 1M"))
+  (set-fontset-font nil '(#x3000 . #x3000) (font-spec :family  "HackGenNerd Console"))
+  ;; emacs appearance
+  (global-hl-line-mode -1)
+  (set-face-background 'fringe "white")
+  ;; evil
+  (setq evil-insert-state-cursor '("chartreuse1" box))
+  ;; spellcheck
+  (setq ispell-local-dictionary-alist
+        '((nil "[a-zA-Z]" "[^a-zA-Z]" "'" t ("-d" "en" "--encoding=utf-8") nil utf-8)))
+  ;; skk
+  (setq default-input-method "japanese-skk")
+  (add-hook 'evil-insert-state-entry-hook 'skk-latin-mode-on)
+  (add-hook 'evil-insert-state-exit-hook (lambda () (skk-mode -1)))
+  (skk-mode)
+  ;; howm
+  (cond ((equal system-type 'darwin))
+        ((equal system-type 'gnu/linux)
+         (setq howm-view-split-horizontally nil)
+         (set-frame-height (selected-frame) 42)
+         (set-frame-width (selected-frame) 90)))
+  (add-hook 'howm-menu-hook 'evil-insert-state)
+  ;; org
+  (setq org-agenda-files '("~/onedrive/org/"))
+  ;; markdown
+  (setq markdown-fontify-code-blocks-natively t)
+  (setq markdown-enable-math t)
+  ;; undo-tree
+  (setq undo-tree-history-directory-alist '(("." . "~/.config/chemacs/undo-tree"))))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
