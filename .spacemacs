@@ -191,6 +191,13 @@ It should only modify the values of Spacemacs settings."
    ;; If the value is nil then no banner is displayed. (default 'official)
    dotspacemacs-startup-banner nil
 
+   ;; Scale factor controls the scaling (size) of the startup banner. Default
+   ;; value is `auto' for scaling the logo automatically to fit all buffer
+   ;; contents, to a maximum of the full image height and a minimum of 3 line
+   ;; heights. If set to a number (int or float) it is used as a constant
+   ;; scaling factor for the default logo size.
+   dotspacemacs-startup-banner-scale 'auto
+
    ;; List of items to show in startup buffer or an association list of
    ;; the form `(list-type . list-size)`. If nil then it is disabled.
    ;; Possible values for list-type are:
@@ -501,7 +508,9 @@ It should only modify the values of Spacemacs settings."
    ;; (default nil - same as frame-title-format)
    dotspacemacs-icon-title-format nil
 
-   ;; Show trailing whitespace (default t)
+   ;; Color highlight trailing whitespace in all prog-mode and text-mode derived
+   ;; modes such as c++-mode, python-mode, emacs-lisp, html-mode, rst-mode etc.
+   ;; (default t)
    dotspacemacs-show-trailing-whitespace t
 
    ;; Delete whitespace while saving buffer. Possible values are `all'
@@ -600,7 +609,7 @@ before packages are loaded."
          (set-frame-width (selected-frame) 90)))
   (add-hook 'howm-menu-hook 'evil-insert-state)
   ;; org
-  (setq org-agenda-files '("~/onedrive/org/"))
+  (setq org-agenda-files '("~/onedrive/log/"))
   ;; markdown
   (setq markdown-fontify-code-blocks-natively t)
   (setq markdown-enable-math t)
@@ -609,21 +618,3 @@ before packages are loaded."
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
-(defun dotspacemacs/emacs-custom-settings ()
-  "Emacs custom settings.
-This is an auto-generated function, do not modify its content directly, use
-Emacs customize menu instead.
-This function is called at the very end of Spacemacs initialization."
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-)
