@@ -610,7 +610,14 @@ before packages are loaded."
          (set-frame-width (selected-frame) 90)))
   (add-hook 'howm-menu-hook 'evil-insert-state)
   ;; org
-  (setq org-agenda-files '("~/onedrive/log/"))
+  (setq org-agenda-files '("~/onedrive/"))
+  (setq org-capture-templates
+        '(("j" "task" checkitem
+           (file+headline "~/onedrive/memo.org" "Tasks") "[ ] %?")
+          ("k" "tips" entry
+           (file+headline "~/onedrive/memo.org" "Tips") "* %T %?")
+          ("l" "idea" entry
+           (file+headline "~/onedrive/memo.org" "Ideas") "* %T %?")))
   ;; markdown
   (setq markdown-fontify-code-blocks-natively t)
   (setq markdown-enable-math t)
