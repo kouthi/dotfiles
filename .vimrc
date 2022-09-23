@@ -28,6 +28,7 @@
 " :se spell
 " :set {option}^={string}
 " :helpclose
+" :dig
 " TIPS: registers
 " ["] unnamed, refer to most recently used register almost every time
 "     with an exception (see below)
