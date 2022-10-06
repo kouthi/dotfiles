@@ -121,3 +121,8 @@ fi
 # 2022-02-08 chemacs aliases
 alias space="emacs --with-profile spacemacs"
 alias dmacs="emacs --with-profile doom"
+
+# 2022-09-29 ripgrep with cmigemo
+mrg(){
+    cmigemo -q -d /usr/share/cmigemo/utf-8/migemo-dict -w $1 | xargs rg
+}
