@@ -60,10 +60,10 @@ This function should only modify configuration layer settings."
      ;; additional default layers
      colors
      html
+     japanese
      osx
      ;; private layers
      howm
-     japanese
      )
 
 
