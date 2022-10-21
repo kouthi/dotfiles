@@ -622,7 +622,7 @@ before packages are loaded."
   (setq markdown-fontify-code-blocks-natively t)
   (setq markdown-enable-math t)
   ;; undo-tree
-  (setq undo-tree-history-directory-alist '(("." . "~/.config/chemacs/undo-tree"))))
+  (setq undo-tree-history-directory-alist '(("." . "/tmp"))))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
