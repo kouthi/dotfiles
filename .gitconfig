@@ -1,4 +1,6 @@
 # This is Git's per-user configuration file.
+[core]
+	autocrlf = input
 [user] 
 	name = kouthi
 	email = kouthi@users.noreply.github.com
