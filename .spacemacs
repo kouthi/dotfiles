@@ -612,12 +612,11 @@ before packages are loaded."
   ;; org
   (setq org-agenda-files '("~/onedrive/"))
   (setq org-capture-templates
-        '(("j" "task" checkitem
-           (file+headline "~/onedrive/memo.org" "Tasks") "[ ] %?")
-          ("k" "tips" entry
-           (file+headline "~/onedrive/memo.org" "Tips") "* %T %?")
-          ("l" "idea" entry
-           (file+headline "~/onedrive/memo.org" "Ideas") "* %T %?")))
+    (mapcar (lambda (keyname)
+        (list (car keyname) (cadr keyname) 'entry
+          (list 'file+headline "~/onedrive/capture.org" (capitalize (cadr keyname)))
+          "* %T %?"))
+      '(("j" "memo") ("k" "tips") ("l" "idea"))))
   ;; markdown
   (setq markdown-fontify-code-blocks-natively t)
   (setq markdown-enable-math t)
