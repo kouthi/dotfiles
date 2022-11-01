@@ -611,6 +611,7 @@ before packages are loaded."
   (add-hook 'howm-menu-hook 'evil-insert-state)
   ;; org
   (setq org-agenda-files '("~/onedrive/"))
+  (setq org-preview-latex-image-directory "/tmp/")
   (setq org-capture-templates
     (mapcar (lambda (keyname)
         (list (car keyname) (cadr keyname) 'entry
