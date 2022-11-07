@@ -126,3 +126,9 @@ alias dmacs="emacs --with-profile doom"
 mrg(){
     cmigemo -q -d /usr/share/cmigemo/utf-8/migemo-dict -w $1 | xargs rg
 }
+
+# 2022-11-07 set $COLORTERM only when in WinTerminal
+# cf.https://github.com/microsoft/terminal/issues/11057
+if [ $WT_SESSION ]; then
+    export COLORTERM=truecolor
+fi
