@@ -1,0 +1,13 @@
+[editor]
+scrolloff = 0
+gutters = []
+
+[editor.statusline]
+left = ["mode", "selections", "spinner", "file-name"]
+center = []
+right = ["diagnostics", "position", "position-percentage", "file-encoding", "file-type"]
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "underline"
