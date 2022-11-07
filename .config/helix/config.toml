@@ -1,6 +1,9 @@
+theme = "dracula"
+
 [editor]
 scrolloff = 0
 gutters = []
+color-modes = true
 
 [editor.statusline]
 left = ["mode", "selections", "spinner", "file-name"]
