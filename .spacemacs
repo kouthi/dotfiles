@@ -594,6 +594,11 @@ before packages are loaded."
   (set-face-background 'fringe "white")
   ;; evil
   (setq evil-insert-state-cursor '("chartreuse1" box))
+  ;; helm-ag
+  (setq helm-ag-base-command "~/.bin/rgm")
+  (defun helm-do-ag-onedrive ()
+    (interactive)
+    (helm-do-ag "~/onedrive"))
   ;; spellcheck
   (setq ispell-local-dictionary-alist
         '((nil "[a-zA-Z]" "[^a-zA-Z]" "'" t ("-d" "en" "--encoding=utf-8") nil utf-8)))
