@@ -610,14 +610,19 @@ before packages are loaded."
          (set-frame-width (selected-frame) 90)))
   (add-hook 'howm-menu-hook 'evil-insert-state)
   ;; org
-  (setq org-agenda-files '("~/onedrive/"))
-  (setq org-preview-latex-image-directory "/tmp/")
+  (setq org-directory "~/onedrive")
+  (setq org-default-notes-file (concat org-directory "/capture.org"))
+  (setq org-agenda-files (list org-default-notes-file))
+  (setq org-agenda-include-diary t)
   (setq org-capture-templates
-    (mapcar (lambda (keyname)
-        (list (car keyname) (cadr keyname) 'entry
-          (list 'file+headline "~/onedrive/capture.org" (capitalize (cadr keyname)))
-          "* %T %?"))
-      '(("j" "memo") ("k" "tips") ("l" "idea"))))
+    (mapcar (lambda (templates)
+        (list (car templates) (cadr templates) 'entry
+          (list 'file+headline "" (caddr templates)) "* %T %?" :kill-buffer t))
+        '(("j" "Note: note-takings to facilitate knowledge build-up process" "Note")
+          ("k" "Tips: how-to techniques, don't wanna forget, seriously" "Tips")
+          ("l" "Idea: fleeting thoughts, let's make them happen someday" "Idea"))))
+  (setq org-preview-latex-image-directory "/tmp/")
+  (setq org-use-sub-superscripts "{}")
   ;; markdown
   (setq markdown-fontify-code-blocks-natively t)
   (setq markdown-enable-math t)
