@@ -57,14 +57,6 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
-(use-package! howm
-  :config
-  (setq howm-menu-lang 'ja)
-  (setq howm-directory "~/onedrive/howm/")
-  (setq howm-keyword-file "~/onedrive/howm/.howm-keys")
-  (setq howm-file-name-format "%Y/%m/%Y-%m-%d_%H%M%S.org")
-  (setq howm-keyword-case-fold-search t)
-  (setq howm-view-split-horizontally t))
 (use-package! valign
   :config
   (add-hook 'org-mode-hook #'valign-mode)
