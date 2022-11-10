@@ -62,8 +62,6 @@ This function should only modify configuration layer settings."
      html
      japanese
      osx
-     ;; private layers
-     howm
      )
 
 
@@ -608,13 +606,6 @@ before packages are loaded."
   (add-hook 'evil-insert-state-entry-hook 'skk-latin-mode-on)
   (add-hook 'evil-insert-state-exit-hook (lambda () (skk-mode -1)))
   (skk-mode)
-  ;; howm
-  (cond ((equal system-type 'darwin))
-        ((equal system-type 'gnu/linux)
-         (setq howm-view-split-horizontally nil)
-         (set-frame-height (selected-frame) 42)
-         (set-frame-width (selected-frame) 90)))
-  (add-hook 'howm-menu-hook 'evil-insert-state)
   ;; org
   (setq org-directory "~/onedrive")
   (setq org-default-notes-file (concat org-directory "/capture.org"))
