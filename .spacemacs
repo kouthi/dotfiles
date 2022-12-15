@@ -603,6 +603,7 @@ before packages are loaded."
         '((nil "[a-zA-Z]" "[^a-zA-Z]" "'" t ("-d" "en" "--encoding=utf-8") nil utf-8)))
   ;; skk
   (setq default-input-method "japanese-skk")
+  (setq skk-j-mode-function-key-usage 'conversion)
   (add-hook 'evil-insert-state-entry-hook 'skk-latin-mode-on)
   (add-hook 'evil-insert-state-exit-hook (lambda () (skk-mode -1)))
   (skk-mode)
