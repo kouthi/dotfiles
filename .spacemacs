@@ -44,15 +44,15 @@ This function should only modify configuration layer settings."
      git
      (helm :variables
            helm-migemo-mode t)
-     lsp
+     ;lsp
      markdown
      multiple-cursors
      (org :variables
           org-enable-reveal-js-support t
           org-enable-valign t)
-     (shell :variables
-            shell-default-height 30
-            shell-default-position 'bottom)
+     ;(shell :variables
+     ;       shell-default-height 30
+     ;       shell-default-position 'bottom)
      spell-checking
      syntax-checking
      version-control
@@ -62,6 +62,7 @@ This function should only modify configuration layer settings."
      html
      japanese
      osx
+     pandoc
      )
 
 
