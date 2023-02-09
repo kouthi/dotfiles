@@ -630,6 +630,7 @@ before packages are loaded."
   ;; markdown
   (setq markdown-fontify-code-blocks-natively t)
   (setq markdown-enable-math t)
+  (setq markdown-indent-on-enter nil)
   ;; undo-tree
   (setq undo-tree-history-directory-alist '(("." . "/tmp"))))
 
