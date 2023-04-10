@@ -592,6 +592,8 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+  ;; General
+  (setq fill-column 90)
   ;; Japanese font
   (set-fontset-font nil 'japanese-jisx0208 (font-spec :family  "Migu 1M"))
   (set-fontset-font nil '(#x3000 . #x3000) (font-spec :family  "HackGenNerd Console"))
