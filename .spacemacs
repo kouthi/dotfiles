@@ -59,6 +59,7 @@ This function should only modify configuration layer settings."
      ;; treemacs
      ;; additional default layers
      colors
+     haskell
      html
      japanese
      osx
@@ -621,7 +622,7 @@ before packages are loaded."
   (setq org-capture-templates
     (mapcar (lambda (templates)
         (list (car templates) (cadr templates) 'entry
-          (list 'file+headline "" (caddr templates)) "* %T %?" :kill-buffer t))
+          (list 'file+headline "" (caddr templates)) "* %T %?" :prepend t :empty-lines 1 :kill-buffer t))
         '(("j" "Note: note-takings to facilitate knowledge build-up process" "Note")
           ("k" "Tips: how-to techniques, don't wanna forget, seriously" "Tips")
           ("l" "Idea: fleeting thoughts, let's make them happen someday" "Idea"))))
