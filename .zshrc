@@ -43,6 +43,9 @@ function rprompt-git-current-branch {
     if [[ "$PWD" =~ '/\.git(/.*)?$' ]]; then
         return
     fi
+    if [[ "$PWD" =~ '/lnk(/.*)?$' ]]; then
+        return
+    fi
     name=$(basename "`git symbolic-ref HEAD 2> /dev/null`")
     if [[ -z $name ]]; then
         return
