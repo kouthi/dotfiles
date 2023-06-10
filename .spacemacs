@@ -275,9 +275,9 @@ It should only modify the values of Spacemacs settings."
             :weight normal
             :width normal))
          ((equal system-type 'gnu/linux)
-          (if (string-match "W" (system-name))
-              '("HackGenNerd Console"
-                :size 20
+          (if (string-match "L" (system-name))
+              '("HackGen Console NF"
+                :size 18
                 :weight normal
                 :width normal)
             '("HackGenNerd Console"
@@ -598,7 +598,7 @@ before packages are loaded."
   (setq fill-column 90)
   ;; Japanese font
   (set-fontset-font nil 'japanese-jisx0208 (font-spec :family  "Migu 1M"))
-  (set-fontset-font nil '(#x3000 . #x3000) (font-spec :family  "HackGenNerd Console"))
+  (set-fontset-font nil '(#x3000 . #x3000) (font-spec :family  "HackGen Console NF"))
   ;; emacs appearance
   (global-hl-line-mode -1)
   (set-face-background 'fringe "white")
