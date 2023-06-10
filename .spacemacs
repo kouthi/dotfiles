@@ -48,7 +48,7 @@ This function should only modify configuration layer settings."
      markdown
      multiple-cursors
      (org :variables
-          org-enable-reveal-js-support t
+          org-enable-roam-support t
           org-enable-valign t)
      ;(shell :variables
      ;       shell-default-height 30
@@ -64,6 +64,8 @@ This function should only modify configuration layer settings."
      japanese
      osx
      pandoc
+     ;; private layers
+     fc
      )
 
 
@@ -630,6 +632,8 @@ before packages are loaded."
           ("l" "Idea: fleeting thoughts, let's make them happen someday" "Idea"))))
   (setq org-preview-latex-image-directory "/tmp/")
   (setq org-use-sub-superscripts "{}")
+  ;; org-roam
+  (setq org-roam-directory "~/onedrive/")
   ;; markdown
   (setq markdown-fontify-code-blocks-natively t)
   (setq markdown-enable-math t)
