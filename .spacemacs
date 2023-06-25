@@ -65,7 +65,7 @@ This function should only modify configuration layer settings."
      osx
      pandoc
      ;; private layers
-     fc
+     org-fc
      )
 
 
