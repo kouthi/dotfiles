@@ -632,6 +632,7 @@ before packages are loaded."
           ("l" "Idea: fleeting thoughts, let's make them happen someday" "Idea"))))
   (setq org-preview-latex-image-directory "/tmp/")
   (setq org-use-sub-superscripts "{}")
+  (setq org-export-with-drawers (not '("LOGBOOK" "REVIEW_DATA")))
   ;; org-roam
   (setq org-roam-directory "~/onedrive/")
   ;; markdown
