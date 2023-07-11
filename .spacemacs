@@ -48,7 +48,6 @@ This function should only modify configuration layer settings."
      markdown
      multiple-cursors
      (org :variables
-          org-enable-roam-support t
           org-enable-valign t)
      ;(shell :variables
      ;       shell-default-height 30
@@ -280,7 +279,7 @@ It should only modify the values of Spacemacs settings."
                 :size 18
                 :weight normal
                 :width normal)
-            '("HackGenNerd Console"
+            '("HackGen Console NF"
               :size 16
               :weight normal
               :width normal))))
@@ -633,8 +632,6 @@ before packages are loaded."
   (setq org-preview-latex-image-directory "/tmp/")
   (setq org-use-sub-superscripts "{}")
   (setq org-export-with-drawers (not '("LOGBOOK" "REVIEW_DATA")))
-  ;; org-roam
-  (setq org-roam-directory "~/onedrive/")
   ;; markdown
   (setq markdown-fontify-code-blocks-natively t)
   (setq markdown-enable-math t)
