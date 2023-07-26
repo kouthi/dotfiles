@@ -27,7 +27,7 @@ This function should only modify configuration layer settings."
    dotspacemacs-ask-for-lazy-installation t
 
    ;; List of additional paths where to look for configuration layers.
-   ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
+   ;; Paths must have a trailing slash (i.e. "~/.mycontribs/")
    dotspacemacs-configuration-layer-path '()
 
    ;; List of configuration layers to load.
@@ -594,7 +594,7 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
   ;; General
-  (setq fill-column 90)
+  (setq-default fill-column 90)
   ;; Japanese font
   (set-fontset-font nil 'japanese-jisx0208 (font-spec :family  "Migu 1M"))
   (set-fontset-font nil '(#x3000 . #x3000) (font-spec :family  "HackGen Console NF"))
