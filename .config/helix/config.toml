@@ -1,4 +1,4 @@
-theme = "dracula"
+theme = "monokai_pro_octagon"
 
 [editor]
 scrolloff = 0
