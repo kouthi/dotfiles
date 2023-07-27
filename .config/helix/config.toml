@@ -17,3 +17,6 @@ select = "underline"
 
 [editor.file-picker]
 follow-symlinks = false
+
+[editor.search]
+wrap-around = false
