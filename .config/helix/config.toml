@@ -14,3 +14,6 @@ right = ["diagnostics", "position", "position-percentage", "file-encoding", "fil
 normal = "block"
 insert = "bar"
 select = "underline"
+
+[editor.file-picker]
+follow-symlinks = false
