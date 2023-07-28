@@ -618,6 +618,9 @@ before packages are loaded."
   (add-hook 'evil-insert-state-exit-hook (lambda () (skk-mode -1)))
   (skk-mode)
   ;; org
+  (add-hook 'org-mode-hook (lambda ()
+                             (make-local-variable 'evil-auto-indent)
+                             (setq evil-auto-indent nil)))
   (setq org-directory "~/onedrive")
   (setq org-default-notes-file (concat org-directory "/capture.org"))
   (setq org-agenda-files (list org-default-notes-file))
