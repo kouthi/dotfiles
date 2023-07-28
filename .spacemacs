@@ -82,7 +82,7 @@ This function should only modify configuration layer settings."
    dotspacemacs-frozen-packages '()
 
    ;; A list of packages that will not be installed and loaded.
-  dotspacemacs-excluded-packages '(pangu-spacing skk-viper viper helm-gitignore)
+   dotspacemacs-excluded-packages '(pangu-spacing skk-viper viper undo-tree)
 
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
@@ -641,7 +641,6 @@ before packages are loaded."
   (setq markdown-indent-on-enter nil)
   ;; undo-tree
   ;; https://github.com/practicalli/spacemacs/issues/267#issuecomment-1563265530
-  (global-undo-tree-mode nil)
   (setq evil-undo-system 'undo-redo))
 
 ;; Do not write anything past this comment. This is where Emacs will
