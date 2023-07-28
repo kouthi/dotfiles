@@ -637,7 +637,9 @@ before packages are loaded."
   (setq markdown-enable-math t)
   (setq markdown-indent-on-enter nil)
   ;; undo-tree
-  (setq undo-tree-history-directory-alist '(("." . "/tmp"))))
+  ;; https://github.com/practicalli/spacemacs/issues/267#issuecomment-1563265530
+  (global-undo-tree-mode nil)
+  (setq evil-undo-system 'undo-redo))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
