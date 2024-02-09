@@ -637,13 +637,35 @@ before packages are loaded."
   (setq org-preview-latex-image-directory "/tmp/")
   (setq org-use-sub-superscripts "{}")
   (setq org-export-with-drawers (not '("LOGBOOK" "REVIEW_DATA")))
+  (setq org-hide-leading-stars t)
   ;; markdown
   (setq markdown-fontify-code-blocks-natively t)
   (setq markdown-enable-math t)
   (setq markdown-indent-on-enter nil)
+  (setq org-superstar-item-bullet-alist '((?* . ?*) (?+ . ?+) (?- . ?‣)))
   ;; undo-tree
   ;; https://github.com/practicalli/spacemacs/issues/267#issuecomment-1563265530
   (setq evil-undo-system 'undo-redo))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
+(defun dotspacemacs/emacs-custom-settings ()
+  "Emacs custom settings.
+This is an auto-generated function, do not modify its content directly, use
+Emacs customize menu instead.
+This function is called at the very end of Spacemacs initialization."
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(org-safe-remote-resources
+   '("\\`https://fniessen\\.github\\.io/org-html-themes/org/theme-bigblow\\.setup\\'" "\\`https://fniessen\\.github\\.io/org-html-themes/org/theme-readtheorg\\.setup\\'"))
+ )
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+)
