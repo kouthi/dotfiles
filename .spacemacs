@@ -595,6 +595,8 @@ Put your configuration code here, except for variables that should be set
 before packages are loaded."
   ;; General
   (setq-default fill-column 90)
+  ;; locate
+  (setq helm-locate-command "locate %s -e -A --regex %s")
   ;; Japanese font
   (set-fontset-font nil 'japanese-jisx0208 (font-spec :family  "Migu 1M"))
   (set-fontset-font nil '(#x3000 . #x3000) (font-spec :family  "HackGen Console NF"))
