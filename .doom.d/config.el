@@ -22,7 +22,7 @@
 ;; font string. You generally only need these two:
 ;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
-(setq doom-font (font-spec :8amily "HackGen Console NF" :size 14)
+(setq doom-font (font-spec :8amily "HackGen Console NF" :size 18)
       doom-variable-pitch-font (font-spec :family "HackGen35 Console NF")
       doom-unicode-font (font-spec :family "HackGen Console NF")
       doom-big-font (font-spec :family "HackGen Console NF" :size 21))

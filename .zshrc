@@ -136,8 +136,5 @@ mrg(){
     # cmigemo -q -d /usr/share/cmigemo/utf-8/migemo-dict -w $1 | xargs rg --glob '!*.html' --glob '!*.css'
 }
 
-# 2022-11-07 set $COLORTERM only when in WinTerminal
-# cf.https://github.com/microsoft/terminal/issues/11057
-if [ $WT_SESSION ]; then
-    export COLORTERM=truecolor
-fi
+# 2024-02-03 color setting for WinTerminal/Alacritty
+export COLORTERM=truecolor
