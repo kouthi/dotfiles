@@ -4,7 +4,7 @@
 [core]
 	autocrlf = input
     quotepath = false
-[user] 
+[user]
 	name = kouthi
 	email = kouthi@users.noreply.github.com
 [alias]
