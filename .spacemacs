@@ -605,6 +605,8 @@ before packages are loaded."
   (set-face-background 'fringe "white")
   ;; evil
   (setq evil-insert-state-cursor '("chartreuse1" box))
+  ;; avoiding error about helm-descbinds (issue#16276)
+  (remove-hook 'helm-mode-hook 'helm-descbinds-mode)
   ;; helm-ag
   (setq helm-ag-base-command "~/.bin/rgm")
   (defun helm-do-ag-onedrive ()
