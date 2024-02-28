@@ -641,6 +641,7 @@ before packages are loaded."
   (setq org-use-sub-superscripts "{}")
   (setq org-export-with-drawers (not '("LOGBOOK" "REVIEW_DATA")))
   (setq org-hide-leading-stars t)
+  (setq org-list-allow-alphabetical t)
   ;; markdown
   (setq markdown-fontify-code-blocks-natively t)
   (setq markdown-enable-math t)
