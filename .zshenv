@@ -8,3 +8,6 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 export DefaultIMModule=fcitx
+
+# 2024-07-04 settings for local libraries
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
