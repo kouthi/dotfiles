@@ -616,7 +616,7 @@ before packages are loaded."
   ;; avoiding error about helm-descbinds (issue#16276)
   (remove-hook 'helm-mode-hook 'helm-descbinds-mode)
   ;; helm-ag
-  (setq helm-ag-base-command "~/.bin/rgm")
+  ;; (setq helm-ag-base-command "~/.bin/rgm")
   (defun helm-do-ag-onedrive ()
     (interactive)
     (helm-do-ag "~/onedrive"))
