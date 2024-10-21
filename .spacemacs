@@ -635,7 +635,7 @@ before packages are loaded."
                              (setq evil-auto-indent nil)))
   (setq org-directory "~/onedrive")
   (setq org-default-notes-file (concat org-directory "/capture.org"))
-  (setq org-agenda-files (list org-default-notes-file))
+  (setq org-agenda-files (list org-default-notes-file "~/fc" "~/onedrive"))
   (setq org-agenda-include-diary t)
   (setq org-capture-templates
     (mapcar (lambda (templates)
