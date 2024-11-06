@@ -303,7 +303,7 @@ It should only modify the values of Spacemacs settings."
 
    ;; Major mode leader key is a shortcut key which is the equivalent of
    ;; pressing `<leader> m`. Set it to `nil` to disable it. (default ",")
-   dotspacemacs-major-mode-leader-key nil
+   dotspacemacs-major-mode-leader-key ","
 
    ;; Major mode leader key accessible in `emacs state' and `insert state'.
    ;; (default "C-M-m" for terminal mode, "<M-return>" for GUI mode).
@@ -373,6 +373,16 @@ It should only modify the values of Spacemacs settings."
    ;; displays the buffer in a same-purpose window even if the buffer can be
    ;; displayed in the current window. (default nil)
    dotspacemacs-switch-to-buffer-prefers-purpose nil
+
+   ;; Whether side windows (such as those created by treemacs or neotree)
+   ;; are kept or minimized by `spacemacs/toggle-maximize-window' (SPC w m).
+   ;; (default t)
+   dotspacemacs-maximize-window-keep-side-windows t
+
+   ;; If nil, no load-hints enabled. If t, enable the `load-hints' which will
+   ;; put the most likely path on the top of `load-path' to reduce walking
+   ;; through the whole `load-path'.
+   dotspacemacs-enable-load-hints t
 
    ;; If non-nil a progress bar is displayed when spacemacs is loading. This
    ;; may increase the boot time on some systems and emacs builds, set it to
@@ -495,6 +505,13 @@ It should only modify the values of Spacemacs settings."
    ;; (default '("rg" "ag" "pt" "ack" "grep"))
    dotspacemacs-search-tools '("rg" "ag" "pt" "ack" "grep")
 
+   ;; The backend used for undo/redo functionality. Possible values are
+   ;; `undo-fu', `undo-redo' and `undo-tree' see also `evil-undo-system'.
+   ;; Note that saved undo history does not get transferred when changing
+   ;; your undo system. The default is currently `undo-fu' as `undo-tree'
+   ;; is not maintained anymore and `undo-redo' is very basic."
+   dotspacemacs-undo-system 'undo-fu
+
    ;; Format specification for setting the frame title.
    ;; %a - the `abbreviated-file-name', or `buffer-name'
    ;; %t - `projectile-project-name'
@@ -530,6 +547,9 @@ It should only modify the values of Spacemacs settings."
    ;; to aggressively delete empty line and long sequences of whitespace,
    ;; `trailing' to delete only the whitespace at end of lines, `changed' to
    ;; delete only whitespace for changed lines or `nil' to disable cleanup.
+   ;; The variable `global-spacemacs-whitespace-cleanup-modes' controls
+   ;; which major modes have whitespace cleanup enabled or disabled
+   ;; by default.
    ;; (default nil)
    dotspacemacs-whitespace-cleanup nil
 
@@ -573,7 +593,7 @@ default it calls `spacemacs/load-spacemacs-env' which loads the environment
 variables declared in `~/.spacemacs.env' or `~/.spacemacs.d/.spacemacs.env'.
 See the header of this file for more information."
   (spacemacs/load-spacemacs-env)
-)
+  )
 
 (defun dotspacemacs/user-init ()
   "Initialization for user code:
@@ -584,7 +604,7 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   (setq package-check-signature nil)
   (setq leuven-scale-outline-headlines nil)
   (setq leuven-scale-org-agenda-structure nil)
-)
+  )
 
 
 (defun dotspacemacs/user-load ()
@@ -592,7 +612,7 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
 This function is called only while dumping Spacemacs configuration. You can
 `require' or `load' the libraries of your choice that will be included in the
 dump."
-)
+  )
 
 
 (defun dotspacemacs/user-config ()
@@ -638,12 +658,12 @@ before packages are loaded."
   (setq org-agenda-files (list org-default-notes-file "~/fc" "~/onedrive"))
   (setq org-agenda-include-diary t)
   (setq org-capture-templates
-    (mapcar (lambda (templates)
-        (list (car templates) (cadr templates) 'entry
-          (list 'file+headline "" (caddr templates)) "* %T %?" :prepend t :empty-lines 1 :kill-buffer t))
-        '(("j" "Note: note-takings to facilitate knowledge build-up process" "Note")
-          ("k" "Tips: how-to techniques, don't wanna forget, seriously" "Tips")
-          ("l" "Idea: fleeting thoughts, let's make them happen someday" "Idea"))))
+        (mapcar (lambda (templates)
+                  (list (car templates) (cadr templates) 'entry
+                        (list 'file+headline "" (caddr templates)) "* %T %?" :prepend t :empty-lines 1 :kill-buffer t))
+                '(("j" "Note: note-takings to facilitate knowledge build-up process" "Note")
+                  ("k" "Tips: how-to techniques, don't wanna forget, seriously" "Tips")
+                  ("l" "Idea: fleeting thoughts, let's make them happen someday" "Idea"))))
   (setq org-preview-latex-image-directory "/tmp/")
   (setq org-use-sub-superscripts "{}")
   (setq org-export-with-drawers (not '("LOGBOOK" "REVIEW_DATA")))
@@ -653,10 +673,7 @@ before packages are loaded."
   (setq markdown-fontify-code-blocks-natively t)
   (setq markdown-enable-math t)
   (setq markdown-indent-on-enter nil)
-  (setq org-superstar-item-bullet-alist '((?* . ?*) (?+ . ?+) (?- . ?‣)))
-  ;; undo-tree
-  ;; https://github.com/practicalli/spacemacs/issues/267#issuecomment-1563265530
-  (setq evil-undo-system 'undo-redo))
+  (setq org-superstar-item-bullet-alist '((?* . ?⁇) (?+ . ?‼) (?- . ?‣))))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
@@ -665,18 +682,18 @@ before packages are loaded."
 This is an auto-generated function, do not modify its content directly, use
 Emacs customize menu instead.
 This function is called at the very end of Spacemacs initialization."
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(org-safe-remote-resources
-   '("\\`https://fniessen\\.github\\.io/org-html-themes/org/theme-bigblow\\.setup\\'" "\\`https://fniessen\\.github\\.io/org-html-themes/org/theme-readtheorg\\.setup\\'"))
- )
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-)
+  (custom-set-variables
+   ;; custom-set-variables was added by Custom.
+   ;; If you edit it by hand, you could mess it up, so be careful.
+   ;; Your init file should contain only one such instance.
+   ;; If there is more than one, they won't work right.
+   '(org-safe-remote-resources
+     '("\\`https://fniessen\\.github\\.io/org-html-themes/org/theme-bigblow\\.setup\\'" "\\`https://fniessen\\.github\\.io/org-html-themes/org/theme-readtheorg\\.setup\\'"))
+   )
+  (custom-set-faces
+   ;; custom-set-faces was added by Custom.
+   ;; If you edit it by hand, you could mess it up, so be careful.
+   ;; Your init file should contain only one such instance.
+   ;; If there is more than one, they won't work right.
+   )
+  )
