@@ -64,6 +64,7 @@ This function should only modify configuration layer settings."
      japanese
      osx
      pandoc
+     vimscript
      ;; private layers
      org-fc
      )
