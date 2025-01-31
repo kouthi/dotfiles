@@ -246,7 +246,11 @@ It should only modify the values of Spacemacs settings."
    ;; package can be defined with `:package', or a theme can be defined with
    ;; `:location' to download the theme package, refer the themes section in
    ;; DOCUMENTATION.org for the full theme specifications.
-   dotspacemacs-themes '(leuven spacemacs-light)
+   dotspacemacs-themes
+   (cond ((equal system-type 'darwin)
+          '(leuven doom-dracula))
+         ((equal system-type 'gnu/linux)
+          '(leuven spacemacs-light)))
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
    ;; `all-the-icons', `custom', `doom', `vim-powerline' and `vanilla'. The
@@ -268,8 +272,8 @@ It should only modify the values of Spacemacs settings."
    ;; Point size is recommended, because it's device independent. (default 10.0)
    dotspacemacs-default-font
    (cond ((equal system-type 'darwin)
-          '("HackGenNerd Console"
-            :size 14
+          '("HackGen Console NF"
+            :size 16
             :weight normal
             :width normal))
          ((equal system-type 'gnu/linux)
@@ -625,6 +629,21 @@ Put your configuration code here, except for variables that should be set
 before packages are loaded."
   ;; General
   (setq-default fill-column 90)
+  (setq select-enable-clipboard nil)
+  ;; OS specifics
+  (cond ((equal system-type 'darwin)
+         (defun my/mac-appearance-theme-switcher (_)
+           (pcase (plist-get (mac-application-state) :appearance)
+             ("NSAppearanceNameDarkAqua"
+              (load-theme 'doom-dracula t)
+              (set-face-background 'fringe "#282A36"))
+             ("NSAppearanceNameAqua"
+              (load-theme 'leuven t)
+              (set-face-background 'fringe "white"))))
+         (my/mac-appearance-theme-switcher nil)
+         (add-hook 'mac-effective-appearance-change-hook #'my/mac-appearance-theme-switcher))
+        ((equal system-type 'gnu/linux)
+         (set-face-background 'fringe "white")))
   ;; locate
   (setq helm-locate-command "locate %s -e -A --regex %s")
   ;; Japanese font
@@ -632,7 +651,6 @@ before packages are loaded."
   (set-fontset-font nil '(#x3000 . #x3000) (font-spec :family  "HackGen Console NF"))
   ;; emacs appearance
   (global-hl-line-mode -1)
-  (set-face-background 'fringe "white")
   ;; evil
   (setq evil-insert-state-cursor '("chartreuse1" box))
   ;; helm-ag
@@ -697,3 +715,5 @@ This function is called at the very end of Spacemacs initialization."
    ;; If there is more than one, they won't work right.
    )
   )
+
+                                        ; LocalWords:  NSAppearanceNameDarkAqua NSAppearanceNameAqua
