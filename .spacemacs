@@ -633,12 +633,13 @@ before packages are loaded."
   ;; OS specifics
   (cond ((equal system-type 'darwin)
          (defun my/mac-appearance-theme-switcher (_)
+           (mapc #'disable-theme custom-enabled-themes)
            (pcase (plist-get (mac-application-state) :appearance)
              ("NSAppearanceNameDarkAqua"
-              (load-theme 'doom-dracula t)
+              (spacemacs/load-theme 'doom-dracula t)
               (set-face-background 'fringe "#282A36"))
              ("NSAppearanceNameAqua"
-              (load-theme 'leuven t)
+              (spacemacs/load-theme 'leuven t)
               (set-face-background 'fringe "white"))))
          (my/mac-appearance-theme-switcher nil)
          (add-hook 'mac-effective-appearance-change-hook #'my/mac-appearance-theme-switcher))
