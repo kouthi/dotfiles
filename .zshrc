@@ -132,7 +132,7 @@ alias dmacs="emacs --with-profile doom"
 # 2022-09-29 ripgrep with cmigemo
 # 2023-05-08 strict files to text documents
 mrg(){
-    cmigemo -q -d /usr/share/cmigemo/utf-8/migemo-dict -w $1 | xargs rg -g '*.txt' -g '*.md' -g '*.org'
+    cmigemo -q -d /usr/share/cmigemo/utf-8/migemo-dict -w $1 | xargs rg -p -g '*.txt' -g '*.md' -g '*.org' | less -R
     # cmigemo -q -d /usr/share/cmigemo/utf-8/migemo-dict -w $1 | xargs rg --glob '!*.html' --glob '!*.css'
 }
 
