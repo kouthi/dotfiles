@@ -610,6 +610,9 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   (setq package-check-signature nil)
   (setq leuven-scale-outline-headlines nil)
   (setq leuven-scale-org-agenda-structure nil)
+  (when (and (equal system-type 'gnu/linux) (getenv "WSLENV"))
+    (add-to-list 'default-frame-alist '(width . 92))
+    (add-to-list 'default-frame-alist '(height . 52)))
   )
 
 
@@ -707,8 +710,7 @@ This function is called at the very end of Spacemacs initialization."
    ;; Your init file should contain only one such instance.
    ;; If there is more than one, they won't work right.
    '(org-safe-remote-resources
-     '("\\`https://fniessen\\.github\\.io/org-html-themes/org/theme-bigblow\\.setup\\'" "\\`https://fniessen\\.github\\.io/org-html-themes/org/theme-readtheorg\\.setup\\'"))
-   )
+     '("\\`https://fniessen\\.github\\.io/org-html-themes/org/theme-bigblow\\.setup\\'" "\\`https://fniessen\\.github\\.io/org-html-themes/org/theme-readtheorg\\.setup\\'")))
   (custom-set-faces
    ;; custom-set-faces was added by Custom.
    ;; If you edit it by hand, you could mess it up, so be careful.
