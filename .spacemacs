@@ -62,7 +62,9 @@ This function should only modify configuration layer settings."
      haskell
      html
      japanese
-     osx
+     (osx :variables
+          osx-option-as nil
+          osx-right-command-as 'meta)
      pandoc
      vimscript
      ;; private layers
