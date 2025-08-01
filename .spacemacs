@@ -594,7 +594,7 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   (setq leuven-scale-org-agenda-structure nil)
   (when (and (equal system-type 'gnu/linux) (getenv "WSLENV"))
     (add-to-list 'default-frame-alist '(width . 92))
-    (add-to-list 'default-frame-alist '(height . 52)))
+    (add-to-list 'default-frame-alist '(height . 48)))
   )
 
 (defun dotspacemacs/user-config ()
