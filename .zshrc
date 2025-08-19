@@ -126,8 +126,8 @@ if [ -d $HOME/g4home ]; then
 fi
 
 # 2022-02-08 chemacs aliases
-alias space="emacs --with-profile spacemacs"
-alias dmacs="emacs --with-profile doom"
+alias space="emacs --init-directory $HOME/.config/chemacs/spacemacs"
+alias dmacs="emacs --init-directory $HOME/.config/chemacs/doom"
 
 # 2022-09-29 ripgrep with cmigemo
 # 2023-05-08 strict files to text documents
