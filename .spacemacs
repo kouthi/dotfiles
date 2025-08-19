@@ -67,8 +67,6 @@ This function should only modify configuration layer settings."
           osx-right-command-as 'meta)
      pandoc
      vimscript
-     ;; private layers
-     org-fc
      )
 
 
