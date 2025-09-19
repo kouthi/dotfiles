@@ -487,9 +487,9 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-persistent-server nil
 
    ;; List of search tool executable names. Spacemacs uses the first installed
-   ;; tool of the list. Supported tools are `rg', `ag', `pt', `ack' and `grep'.
-   ;; (default '("rg" "ag" "pt" "ack" "grep"))
-   dotspacemacs-search-tools '("rg" "ag" "pt" "ack" "grep")
+   ;; tool of the list. Supported tools are `rg', `ag', `ack' and `grep'.
+   ;; (default '("rg" "ag" "ack" "grep"))
+   dotspacemacs-search-tools '("rg" "ag" "ack" "grep")
 
    ;; The backend used for undo/redo functionality. Possible values are
    ;; `undo-fu', `undo-redo' and `undo-tree' see also `evil-undo-system'.
@@ -648,7 +648,7 @@ before packages are loaded."
                              (setq evil-auto-indent nil)))
   (setq org-directory "~/onedrive")
   (setq org-default-notes-file (concat org-directory "/capture.org"))
-  (setq org-agenda-files (list org-default-notes-file "~/fc" "~/onedrive"))
+  (setq org-agenda-files (list org-default-notes-file "~/onedrive"))
   (setq org-agenda-include-diary t)
   (setq org-capture-templates
         (mapcar (lambda (templates)
@@ -682,7 +682,8 @@ This function is called at the very end of Spacemacs initialization."
    ;; Your init file should contain only one such instance.
    ;; If there is more than one, they won't work right.
    '(org-safe-remote-resources
-     '("\\`https://fniessen\\.github\\.io/org-html-themes/org/theme-bigblow\\.setup\\'" "\\`https://fniessen\\.github\\.io/org-html-themes/org/theme-readtheorg\\.setup\\'")))
+     '("\\`https://fniessen\\.github\\.io/org-html-themes/org/theme-bigblow\\.setup\\'"
+       "\\`https://fniessen\\.github\\.io/org-html-themes/org/theme-readtheorg\\.setup\\'")))
   (custom-set-faces
    ;; custom-set-faces was added by Custom.
    ;; If you edit it by hand, you could mess it up, so be careful.
@@ -691,4 +692,6 @@ This function is called at the very end of Spacemacs initialization."
    )
   )
 
-                                        ; LocalWords:  NSAppearanceNameDarkAqua NSAppearanceNameAqua
+;; aspell buffer dictionary
+;; LocalWords:  NSAppearanceNameDarkAqua NSAppearanceNameAqua dired kb sexp Spaceline
+;; LocalWords:  WSLENV recenters attemption mycontribs Migu
