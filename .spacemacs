@@ -633,6 +633,11 @@ before packages are loaded."
   (defun helm-do-ag-onedrive ()
     (interactive)
     (helm-do-ag "~/onedrive"))
+  ;; helm-swoop
+  (setq helm-swoop-pre-input-function
+        (lambda ()
+          (when (use-region-p)
+            (apply #'buffer-substring (region-bounds)))))
   ;; spellcheck
   (setq ispell-local-dictionary-alist
         '((nil "[a-zA-Z]" "[^a-zA-Z]" "'" t ("-d" "en" "--encoding=utf-8") nil utf-8)))
