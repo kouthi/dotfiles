@@ -628,6 +628,10 @@ before packages are loaded."
   (global-hl-line-mode -1)
   ;; evil
   (setq evil-insert-state-cursor '("chartreuse1" box))
+  ;; helm
+  (with-eval-after-load 'helm-elisp
+    (setq helm-M-x-show-short-doc nil
+          helm-apropos-show-short-doc nil))
   ;; helm-ag
   ;; (setq helm-ag-base-command "~/.bin/rgm")
   (defun helm-do-ag-onedrive ()
