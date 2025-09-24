@@ -42,27 +42,24 @@ This function should only modify configuration layer settings."
      ;; better-defaults
      emacs-lisp
      git
-     (helm :variables
-           helm-migemo-mode t)
+     (helm :variables helm-migemo-mode t)
      lsp
      markdown
      multiple-cursors
-     (org :variables
-          org-enable-valign t)
+     (org :variables org-enable-valign t)
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
      spell-checking
      syntax-checking
-     (version-control :variables
-                      version-control-diff-tool 'git-gutter)
+     (version-control :variables version-control-diff-tool 'git-gutter)
      ;; treemacs
      ;; additional default layers
      colors
      japanese
-     (osx :variables
-          osx-option-as nil
-          osx-right-command-as 'meta)
+     (osx :variables osx-option-as nil osx-right-command-as 'meta)
+     (llm-client :variables
+                 llm-client-enable-gptel t llm-client-enable-ellama t)
      pandoc
      theming
      )
