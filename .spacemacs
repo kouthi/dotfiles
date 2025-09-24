@@ -604,7 +604,7 @@ before packages are loaded."
   (setq select-enable-clipboard nil)
   ;; OS specifics
   (cond ((equal system-type 'darwin)
-         (defun my/mac-appearance-theme-switcher (_)
+         (defun my/macos-theme-switcher (_)
            (mapc #'disable-theme custom-enabled-themes)
            (pcase (plist-get (mac-application-state) :appearance)
              ("NSAppearanceNameDarkAqua"
@@ -613,8 +613,8 @@ before packages are loaded."
              ("NSAppearanceNameAqua"
               (spacemacs/load-theme 'leuven t)
               (set-face-background 'fringe "white"))))
-         (my/mac-appearance-theme-switcher nil)
-         (add-hook 'mac-effective-appearance-change-hook #'my/mac-appearance-theme-switcher))
+         (my/macos-theme-switcher nil)
+         (add-hook 'mac-effective-appearance-change-hook #'my/macos-theme-switcher))
         ((equal system-type 'gnu/linux)
          (set-face-background 'fringe "white")))
   ;; locate
