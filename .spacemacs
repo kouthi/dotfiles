@@ -648,6 +648,12 @@ before packages are loaded."
   ;; spellcheck
   (setq ispell-local-dictionary-alist
         '((nil "[a-zA-Z]" "[^a-zA-Z]" "'" t ("-d" "en" "--encoding=utf-8") nil utf-8)))
+  (add-hook 'flyspell-mode-hok
+            (lambda ()
+              (setq flyspell-generic-check-word-predicate
+                    (lambda ()
+                      (let ((word (thing-at-point 'word)))
+                        (if (< (length word) 3) nil t))))))
   ;; skk
   (setq default-input-method "japanese-skk")
   (setq skk-j-mode-function-key-usage 'conversion)
