@@ -39,12 +39,12 @@ This function should only modify configuration layer settings."
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      auto-completion
-     better-defaults
+     ;; better-defaults
      emacs-lisp
      git
      (helm :variables
            helm-migemo-mode t)
-     ;; lsp
+     lsp
      markdown
      multiple-cursors
      (org :variables
@@ -59,14 +59,12 @@ This function should only modify configuration layer settings."
      ;; treemacs
      ;; additional default layers
      colors
-     haskell
-     html
      japanese
      (osx :variables
           osx-option-as nil
           osx-right-command-as 'meta)
      pandoc
-     vimscript
+     theming
      )
 
 
