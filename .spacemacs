@@ -54,12 +54,11 @@ This function should only modify configuration layer settings."
      syntax-checking
      (version-control :variables version-control-diff-tool 'git-gutter)
      ;; treemacs
-     ;; additional default layers
+     ;; --- additional official layers ---
      colors
      japanese
      (osx :variables osx-option-as nil osx-right-command-as 'meta)
-     (llm-client :variables
-                 llm-client-enable-gptel t llm-client-enable-ellama t)
+     (llm-client :variables llm-client-enable-gptel t)
      pandoc
      theming
      )
@@ -680,13 +679,11 @@ before packages are loaded."
   (setq org-superstar-item-bullet-alist '((?* . ?⁇) (?+ . ?‼) (?- . ?‣)))
   ;; llm-client
   (setq gptel-default-mode 'org-mode)
-  (setq gptel-backend
-        (gptel-make-perplexity "Perplexity"
-          :key #'gptel-api-key-from-auth-source
-          :stream t))
-  (setq gptel-model 'sonar-pro)
+  (setq gptel-model 'gpt-5
+        gptel-backend (gptel-make-gh-copilot "Copilot"))
+  (gptel-make-perplexity "Perplexity"
+    :key #'gptel-api-key-from-auth-source :stream t)
   )
-
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
