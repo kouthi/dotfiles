@@ -677,7 +677,15 @@ before packages are loaded."
   (setq markdown-fontify-code-blocks-natively t)
   (setq markdown-enable-math t)
   (setq markdown-indent-on-enter nil)
-  (setq org-superstar-item-bullet-alist '((?* . ?⁇) (?+ . ?‼) (?- . ?‣))))
+  (setq org-superstar-item-bullet-alist '((?* . ?⁇) (?+ . ?‼) (?- . ?‣)))
+  ;; llm-client
+  (setq gptel-default-mode 'org-mode)
+  (setq gptel-backend
+        (gptel-make-perplexity "Perplexity"
+          :key #'gptel-api-key-from-auth-source
+          :stream t))
+  (setq gptel-model 'sonar-pro)
+  )
 
 
 ;; Do not write anything past this comment. This is where Emacs will
