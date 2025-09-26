@@ -683,9 +683,9 @@ before packages are loaded."
         gptel-backend (gptel-make-gh-copilot "Copilot"))
   (gptel-make-perplexity "Perplexity"
     :key #'gptel-api-key-from-auth-source :stream t)
-  (spacemacs/declare-prefix "l" "GPTel")
   (spacemacs/set-leader-keys "$gr" 'gptel-rewrite)
   (spacemacs/set-leader-keys "l" (lookup-key spacemacs-default-map "$g"))
+  (spacemacs/declare-prefix "l" "GPTel")
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
