@@ -58,7 +58,7 @@ This function should only modify configuration layer settings."
      colors
      japanese
      (osx :variables osx-option-as nil osx-right-command-as 'meta)
-     (llm-client :variables llm-client-enable-gptel t)
+     (llm-client :variables llm-client-enable-gptel t llm-client-enable-ellama nil)
      pandoc
      theming
      )
@@ -683,6 +683,8 @@ before packages are loaded."
         gptel-backend (gptel-make-gh-copilot "Copilot"))
   (gptel-make-perplexity "Perplexity"
     :key #'gptel-api-key-from-auth-source :stream t)
+  (spacemacs/declare-prefix "l" "GPTel")
+  (spacemacs/set-leader-keys "l" (lookup-key spacemacs-default-map "$g"))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
