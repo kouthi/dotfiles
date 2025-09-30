@@ -586,7 +586,7 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   (setq leuven-scale-org-agenda-structure nil)
   (when (and (equal system-type 'gnu/linux) (getenv "WSLENV"))
     (add-to-list 'default-frame-alist '(width . 93))
-    (add-to-list 'default-frame-alist '(height . 51)))
+    (add-to-list 'default-frame-alist '(height . 47)))
   (setq theming-modifications
         '((leuven
            (org-drawer :height 0.6)
