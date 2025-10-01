@@ -627,6 +627,8 @@ before packages are loaded."
   (global-hl-line-mode -1)
   ;; evil
   (setq evil-insert-state-cursor '("chartreuse1" box))
+  (define-key evil-normal-state-map (kbd "C-a") 'evil-numbers/inc-at-pt)
+  (define-key evil-normal-state-map (kbd "C-x") 'evil-numbers/dec-at-pt)
   ;; helm-ag
   ;; (setq helm-ag-base-command "~/.bin/rgm")
   (defun helm-do-ag-onedrive ()
