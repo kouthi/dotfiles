@@ -56,6 +56,8 @@ This function should only modify configuration layer settings."
      ;; treemacs
      ;; --- additional official layers ---
      colors
+     (debug)
+     (debug)
      japanese
      (osx :variables osx-option-as nil osx-right-command-as 'meta)
      (llm-client :variables llm-client-enable-gptel t llm-client-enable-ellama nil)
@@ -603,6 +605,7 @@ before packages are loaded."
   ;; General
   (setq-default fill-column 90)
   (setq select-enable-clipboard nil)
+  (setq calendar-week-start-day 1)
   ;; OS specifics
   (cond ((equal system-type 'darwin)
          (defun my/macos-theme-switcher (_)
