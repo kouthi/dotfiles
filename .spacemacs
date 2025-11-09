@@ -607,20 +607,38 @@ before packages are loaded."
   (setq select-enable-clipboard nil)
   (setq calendar-week-start-day 1)
   ;; OS specifics
-  (cond ((equal system-type 'darwin)
-         (defun my/macos-theme-switcher (_)
-           (mapc #'disable-theme custom-enabled-themes)
-           (pcase (plist-get (mac-application-state) :appearance)
-             ("NSAppearanceNameDarkAqua"
-              (spacemacs/load-theme 'doom-dracula t)
-              (set-face-background 'fringe "#282A36"))
-             ("NSAppearanceNameAqua"
-              (spacemacs/load-theme 'leuven t)
-              (set-face-background 'fringe "white"))))
-         (my/macos-theme-switcher nil)
-         (add-hook 'mac-effective-appearance-change-hook #'my/macos-theme-switcher))
-        ((equal system-type 'gnu/linux)
-         (set-face-background 'fringe "white")))
+  (defun my/sync-theme-to-macos-appearance (appearance)
+    "Sync the Emacs theme to the macOS system appearance."
+    (mapc #'disable-theme custom-enabled-themes)
+    (pcase appearance
+      ('dark
+       (load-theme 'doom-dracula t)
+       (set-face-background 'fringe "#282A36"))
+      ('light
+       (load-theme 'leuven t)
+       (set-face-background 'fringe "white"))))
+
+  (when (eq system-type 'darwin)
+    ;; `ns-system-appearance` was introduced in Emacs 28 for macOS.
+    ;; It's available on emacs-plus.
+    (if (boundp 'ns-system-appearance)
+        (progn
+          (add-hook 'ns-system-appearance-change-functions #'my/sync-theme-to-macos-appearance)
+          ;; Set the theme initially
+          (my/sync-theme-to-macos-appearance ns-system-appearance))
+      ;; Fallback for older Emacs versions on macOS
+      (when (fboundp 'mac-application-state)
+        (defun my/macos-theme-switcher-legacy (_)
+          (pcase (plist-get (mac-application-state) :appearance)
+            ("NSAppearanceNameDarkAqua" (my/sync-theme-to-macos-appearance 'dark))
+            ("NSAppearanceNameAqua" (my/sync-theme-to-macos-appearance 'light))))
+        (add-hook 'mac-effective-appearance-change-hook #'my/macos-theme-switcher-legacy)
+        ;; Set the theme initially
+        (my/macos-theme-switcher-legacy nil))))
+
+  (when (eq system-type 'gnu/linux)
+    ;; Your original setting for Linux
+    (set-face-background 'fringe "white"))
   ;; locate
   (setq helm-locate-command "locate %s -e -A --regex %s")
   ;; Japanese font
