@@ -1,3 +1,5 @@
+theme = Dracula
+
 background = 262626
 
 font-family = HackGen Console NF
