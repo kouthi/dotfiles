@@ -51,7 +51,7 @@
 source $VIMRUNTIME/vimrc_example.vim
 " reset some settings in vimrc_example.vim
 set scrolloff=0
-unmap Q
+" unmap Q
 
 " colorscheme
 syntax on
@@ -82,7 +82,20 @@ set mouse=a
 behave mswin
 set completeopt=menuone,preview showfulltag pumheight=10
 " 2018-04-18 http://auewe.hatenablog.com/entry/2013/05/14/003610 
-set backupdir=~/.vim/backup directory=~/.vim/swap noundofile
+" set backupdir=~/.vim/backup directory=~/.vim/swap noundofile
+" 2026-01-20 backup/swap will be located based on location of .vimrc
+if isdirectory($HOME . '/.vim/backup')
+    set backupdir^=$HOME/.vim/backup//
+endif
+if isdirectory($HOME . '/.vim/swap')
+    set directory^=$HOME/.vim/swap//
+endif
+if isdirectory($HOME . '/.config/vim/backup')
+    set backupdir^=$HOME/.config/vim/backup//
+endif
+if isdirectory($HOME . '/.config/vim/swap')
+    set directory^=$HOME/.config/vim/swap//
+endif
 "set noequalalways " This causes E36 when :cwin. I can't recognize why.
 set foldmethod=syntax
 let g:perl_fold=1
