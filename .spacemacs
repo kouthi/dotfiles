@@ -56,8 +56,7 @@ This function should only modify configuration layer settings."
      ;; treemacs
      ;; --- additional official layers ---
      colors
-     (debug)
-     (debug)
+     html
      japanese
      (osx :variables osx-option-as nil osx-right-command-as 'meta)
      (llm-client :variables llm-client-enable-gptel t llm-client-enable-ellama nil)
