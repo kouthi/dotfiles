@@ -675,6 +675,10 @@ before packages are loaded."
   (add-hook 'evil-insert-state-exit-hook (lambda () (skk-mode -1)))
   (skk-mode)
   ;; org
+  (with-eval-after-load 'org
+    (setq org-startup-indented t
+          org-indent-indentation-per-level 0
+          org-list-indent-offset 2))
   (add-hook 'org-mode-hook (lambda ()
                              (make-local-variable 'evil-auto-indent)
                              (setq evil-auto-indent nil)))
