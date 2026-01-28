@@ -678,7 +678,7 @@ before packages are loaded."
   (with-eval-after-load 'org
     (setq org-startup-indented t
           org-indent-indentation-per-level 0
-          org-list-indent-offset 2))
+          org-list-indent-offset 0))
   (add-hook 'org-mode-hook (lambda ()
                              (make-local-variable 'evil-auto-indent)
                              (setq evil-auto-indent nil)))
