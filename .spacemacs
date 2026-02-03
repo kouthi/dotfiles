@@ -58,8 +58,10 @@ This function should only modify configuration layer settings."
      colors
      html
      japanese
-     (osx :variables osx-option-as nil osx-right-command-as 'meta)
+     javascript
      (llm-client :variables llm-client-enable-gptel t llm-client-enable-ellama nil)
+     mermaid
+     (osx :variables osx-option-as nil osx-right-command-as 'meta)
      pandoc
      theming
      )
