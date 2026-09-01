@@ -1,3 +1,4 @@
+;;; -*- lexical-binding: t; -*-
 ;(require 'skk-study)
 ;(require 'skk-tankan)
 ;(require 'skk-gadget)
