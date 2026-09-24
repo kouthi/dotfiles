@@ -604,7 +604,7 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
     (add-to-list 'default-frame-alist '(height . 47)))
   (setq theming-modifications
         '((leuven
-           (org-drawer :height 0.6)
+           (org-drawer :height 0.2)
            (org-special-keyword :height 0.8)
            (org-property-value :height 0.8))))
   )
@@ -712,6 +712,19 @@ before packages are loaded."
   (setq org-export-with-drawers (not '("LOGBOOK" "REVIEW_DATA")))
   (setq org-hide-leading-stars t)
   (setq org-list-allow-alphabetical t)
+  ;; org drawer: exclude trailing newlines from line-height calculation
+  (defconst myspacemacs/org-drawer-line-re
+    "^[ \t]*:[[:alnum:]_@#%+-]+:.*\\(\n\\)"
+    "Matches drawer/property lines such as :PROPERTIES:, :DATE: ..., :END:.")
+  (with-eval-after-load 'org
+    (font-lock-add-keywords
+     'org-mode
+     `((,myspacemacs/org-drawer-line-re 1 '(face nil line-height t)))
+     'append))
+  (add-hook 'org-mode-hook
+            (lambda ()
+              (setq-local font-lock-extra-managed-props
+                          (cons 'line-height font-lock-extra-managed-props))))
   ;; markdown
   (setq markdown-fontify-code-blocks-natively t)
   (setq markdown-enable-math t)
@@ -752,10 +765,7 @@ This function is called at the very end of Spacemacs initialization."
    ;; If you edit it by hand, you could mess it up, so be careful.
    ;; Your init file should contain only one such instance.
    ;; If there is more than one, they won't work right.
-   '(org-drawer ((t (:height 0.6))))
-   '(org-property-value ((t (:height 0.8))))
-   '(org-special-keyword ((t (:height 0.8)))))
-  )
+   ))
 
 ;; aspell buffer dictionary
 ;; LocalWords:  NSAppearanceNameDarkAqua NSAppearanceNameAqua dired kb sexp Spaceline
