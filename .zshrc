@@ -138,3 +138,6 @@ mrg(){
 
 # 2024-02-03 color setting for WinTerminal/Alacritty
 export COLORTERM=truecolor
+
+# 2026-11-10 fzf
+source <(fzf --zsh)
