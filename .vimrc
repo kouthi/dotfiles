@@ -83,6 +83,8 @@ behave mswin
 set completeopt=menuone,preview showfulltag pumheight=10
 " 2018-04-18 http://auewe.hatenablog.com/entry/2013/05/14/003610 
 " set backupdir=~/.vim/backup directory=~/.vim/swap noundofile
+" 2026-11-10 I can't remember why I disabled noundofile...
+set noundofile
 " 2026-01-20 backup/swap will be located based on location of .vimrc
 if isdirectory($HOME . '/.vim/backup')
     set backupdir^=$HOME/.vim/backup//
