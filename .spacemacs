@@ -59,7 +59,6 @@ This function should only modify configuration layer settings."
      html
      japanese
      javascript
-     (llm-client :variables llm-client-enable-gptel t llm-client-enable-ellama nil)
      mermaid
      (osx :variables osx-option-as nil osx-right-command-as 'meta)
      pandoc
@@ -630,7 +629,6 @@ before packages are loaded."
       ('light
        (load-theme 'leuven t)
        (set-face-background 'fringe "white"))))
-
   (when (eq system-type 'darwin)
     ;; `ns-system-appearance` was introduced in Emacs 28 for macOS.
     ;; It's available on emacs-plus.
@@ -648,9 +646,7 @@ before packages are loaded."
         (add-hook 'mac-effective-appearance-change-hook #'my/macos-theme-switcher-legacy)
         ;; Set the theme initially
         (my/macos-theme-switcher-legacy nil))))
-
   (when (eq system-type 'gnu/linux)
-    ;; Your original setting for Linux
     (set-face-background 'fringe "white"))
   ;; locate
   (setq helm-locate-command "locate %s -e -A --regex %s")
@@ -730,14 +726,6 @@ before packages are loaded."
   (setq markdown-enable-math t)
   (setq markdown-indent-on-enter nil)
   (setq org-superstar-item-bullet-alist '((?* . ?⁇) (?+ . ?‼) (?- . ?‣)))
-  ;; llm-client
-  (setq gptel-default-mode 'org-mode)
-  (setq gptel-model 'gpt-5
-        gptel-backend (gptel-make-gh-copilot "Copilot"))
-  (gptel-make-perplexity "Perplexity"
-    :key #'gptel-api-key-from-auth-source :stream t)
-  (spacemacs/set-leader-keys "$" (lookup-key spacemacs-default-map "$g"))
-  (spacemacs/declare-prefix "$" "GPTel")
   )
 
 
