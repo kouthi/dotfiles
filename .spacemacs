@@ -672,7 +672,7 @@ before packages are loaded."
   ;; spellcheck
   (setq ispell-local-dictionary-alist
         '((nil "[a-zA-Z]" "[^a-zA-Z]" "'" t ("-d" "en" "--encoding=utf-8") nil utf-8)))
-  (add-hook 'flyspell-mode-hok
+  (add-hook 'flyspell-mode-hook
             (lambda ()
               (setq flyspell-generic-check-word-predicate
                     (lambda ()
