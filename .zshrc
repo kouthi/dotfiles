@@ -115,6 +115,8 @@ linux-gnu*)
     ###     export GDK_SCALE=2  # for 4K display
     ### fi
     ### ;;
+    # 2026-11-13 graphics settings for chromium
+    export GALLIUM_DRIVER=d3d12
 esac
 
 # 2017-09-27 setup for geant4
